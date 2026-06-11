@@ -1,14 +1,14 @@
 doctype html
-html(lang='en')
+html(lang='zh-CN')
 
     head
 
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-        meta(name='description', content='')
-        meta(name='author', content='')
+        meta(name='description', content='云芯互联专注于云数据中心、智能计算和高速网络互联芯片设计，提供面向云边端基础设施的高性能芯片与解决方案。')
+        meta(name='author', content='云芯互联')
 
-        title Modern Business - Start Bootstrap Template
+        title 云芯互联 - 云数据中心与智能计算互联芯片
 
         // Favicon
         link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
@@ -23,135 +23,133 @@ html(lang='en')
             include includes/navbar.pug
 
             // Header
-            header.bg-dark.py-5
-                .container.px-5
-                    .row.gx-5.align-items-center.justify-content-center
-                        .col-lg-8.col-xl-7.col-xxl-6
-                            .my-5.text-center.text-xl-start
-                                h1.display-5.fw-bolder.text-white.mb-2 A Bootstrap 5 template for modern businesses
-                                p.lead.fw-normal.text-white-50.mb-4 Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit! 
-                                .d-grid.gap-3.d-sm-flex.justify-content-sm-center.justify-content-xl-start
-                                    a.btn.btn-primary.btn-lg.px-4.me-sm-3(href='#features') Get Started
-                                    a.btn.btn-outline-light.btn-lg.px-4(href='#!') Learn More
-                        .col-xl-5.col-xxl-6.d-none.d-xl-block.text-center
-                            img.img-fluid.rounded-3.my-5(src='https://dummyimage.com/600x400/343a40/6c757d', alt='...')
+            header.hero-tech.py-5
+                .container.px-5.py-5
+                    .row.gx-5.align-items-center.justify-content-between
+                        .col-lg-7
+                            .my-5
+                                .eyebrow.mb-3 Cloud · AI · Interconnect
+                                h1.display-4.fw-bolder.mb-4 面向智能计算时代的高速互联芯片
+                                p.lead.fw-normal.text-white-50.mb-4 云芯互联专注于云数据中心、AI 计算集群和边缘基础设施，提供高性能、低时延、可扩展的网络互联芯片与系统级解决方案。
+                                .d-grid.gap-3.d-sm-flex
+                                    a.btn.btn-primary.btn-lg.px-4.me-sm-3(href='about.html') 了解我们
+                                    a.btn.btn-outline-light.btn-lg.px-4(href='portfolio-overview.html') 产品与方案
+                        .col-lg-5.d-none.d-lg-block
+                            .chip-visual.my-5
+                                .chip-node.node-1 400G
+                                .chip-node.node-2 智能加速
+                                .chip-core
+                                .chip-node.node-3 AI底座
+                                .chip-node.node-4 弹性
 
-            // Features section
+            // Capabilities section
             section#features.py-5
                 .container.px-5.my-5
-                    .row.gx-5
-                        .col-lg-4.mb-5.mb-lg-0
-                            h2.fw-bolder.mb-0 A better way to start building.
+                    .row.gx-5.mb-4
+                        .col-lg-4
+                            .eyebrow.mb-2 Capabilities
+                            h2.fw-bolder.mb-3 核心技术能力
                         .col-lg-8
-                            .row.gx-5.row-cols-1.row-cols-md-2
-                                .col.mb-5.h-100
+                            p.lead.text-muted.mb-0 围绕高速互联、芯片架构、系统软件和场景验证，构建面向下一代智能计算基础设施的端到端能力。
+                    .row.gx-4.row-cols-1.row-cols-md-2.row-cols-xl-4
+                        .col.mb-4
+                            .card.tech-card.h-100.border-0.shadow-sm
+                                .card-body.p-4
                                     .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-3
-                                        i.bi.bi-collection
-                                    h2.h5 Featured title
-                                    p.mb-0
-                                        | Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.
-                                .col.mb-5.h-100
+                                        i.bi.bi-diagram-3
+                                    h3.h5.fw-bold 高速网络互联
+                                    p.text-muted.mb-0 面向数据中心东西向流量，优化高吞吐、低时延和可靠传输能力。
+                        .col.mb-4
+                            .card.tech-card.h-100.border-0.shadow-sm
+                                .card-body.p-4
                                     .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-3
-                                        i.bi.bi-building
-                                    h2.h5 Featured title
-                                    p.mb-0
-                                        | Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.
-                                .col.mb-5.mb-md-0.h-100
+                                        i.bi.bi-cpu
+                                    h3.h5.fw-bold 芯片架构设计
+                                    p.text-muted.mb-0 以可扩展架构和关键 IP 为基础，支撑不同带宽与场景需求。
+                        .col.mb-4
+                            .card.tech-card.h-100.border-0.shadow-sm
+                                .card-body.p-4
                                     .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-3
-                                        i.bi.bi-toggles2
-                                    h2.h5 Featured title
-                                    p.mb-0
-                                        | Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.
-                                .col.h-100
+                                        i.bi.bi-cloud
+                                    h3.h5.fw-bold 云边端协同
+                                    p.text-muted.mb-0 覆盖云数据中心、智能边缘和企业网络基础设施的多场景部署。
+                        .col.mb-4
+                            .card.tech-card.h-100.border-0.shadow-sm
+                                .card-body.p-4
                                     .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-3
-                                        i.bi.bi-toggles2
-                                    h2.h5 Featured title
-                                    p.mb-0
-                                        | Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.
+                                        i.bi.bi-sliders
+                                    h3.h5.fw-bold 软硬件协同优化
+                                    p.text-muted.mb-0 通过驱动、工具链和验证平台提升系统级性能与交付效率。
 
-            // Testimonial section
-            .py-5.bg-light
+            // Solutions section
+            section.py-5.section-muted
                 .container.px-5.my-5
-                    .row.gx-5.justify-content-center
-                        .col-lg-10.col-xl-7
-                            .text-center
-                                .fs-4.mb-4.fst-italic "Working with Start Bootstrap templates has saved me tons of development time when building new projects! Starting with a Bootstrap template just makes things easier!"
-                                .d-flex.align-items-center.justify-content-center
-                                    img.rounded-circle.me-3(src='https://dummyimage.com/40x40/ced4da/6c757d', alt='...')
-                                    .fw-bold
-                                        | Tom Ato
-                                        span.fw-bold.text-primary.mx-1 /
-                                        | CEO, Pomodoro
+                    .text-center.mb-5
+                        .eyebrow.mb-2 Solutions
+                        h2.fw-bolder 产品与方案
+                        p.lead.text-muted.mb-0 为智能算力基础设施提供可验证、可演进的互联底座。
+                    .row.gx-5
+                        .col-lg-4.mb-4
+                            .card.tech-card.h-100.shadow-sm.border-0
+                                .gradient-panel.rounded-bottom-0
+                                .card-body.p-4
+                                    h3.h5.fw-bold 数据中心互联芯片
+                                    p.text-muted 面向云数据中心高带宽、低时延网络场景，支撑规模化集群互联。
+                                    a.text-decoration-none.fw-bold(href='portfolio-overview.html') 查看方案
+                                        i.bi.bi-arrow-right.ms-1
+                        .col-lg-4.mb-4
+                            .card.tech-card.h-100.shadow-sm.border-0
+                                .gradient-panel.rounded-bottom-0
+                                .card-body.p-4
+                                    h3.h5.fw-bold 智能网卡 / DPU 方案
+                                    p.text-muted 通过硬件卸载与可编程数据平面，释放主机算力并提升网络效率。
+                                    a.text-decoration-none.fw-bold(href='portfolio-overview.html') 查看方案
+                                        i.bi.bi-arrow-right.ms-1
+                        .col-lg-4.mb-4
+                            .card.tech-card.h-100.shadow-sm.border-0
+                                .gradient-panel.rounded-bottom-0
+                                .card-body.p-4
+                                    h3.h5.fw-bold 高速以太网交换
+                                    p.text-muted 面向 AI 训练、存储和云网络流量，提供高可靠转发与扩展能力。
+                                    a.text-decoration-none.fw-bold(href='portfolio-overview.html') 查看方案
+                                        i.bi.bi-arrow-right.ms-1
 
-            // Blog preview section
+            // Scenario section
             section.py-5
                 .container.px-5.my-5
-                    .row.gx-5.justify-content-center
-                        .col-lg-8.col-xl-6
-                            .text-center
-                                h2.fw-bolder From our blog
-                                p.lead.fw-normal.text-muted.mb-5 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque fugit ratione dicta mollitia. Officiis ad.
-                    .row.gx-5
-                        .col-lg-4.mb-5
-                            .card.h-100.shadow.border-0
-                                img.card-img-top(src='https://dummyimage.com/600x350/ced4da/6c757d', alt='...')
-                                .card-body.p-4
-                                    .badge.bg-primary.bg-gradient.rounded-pill.mb-2 News
-                                    a.text-decoration-none.link-dark.stretched-link(href='#!')
-                                        h5.card-title.mb-3 Blog post title
-                                    p.card-text.mb-0
-                                        | Some quick example text to build on the card title and make up the bulk of the card's content.
-                                .card-footer.p-4.pt-0.bg-transparent.border-top-0
-                                    .d-flex.align-items-end.justify-content-between
-                                        .d-flex.align-items-center
-                                            img.rounded-circle.me-3(src='https://dummyimage.com/40x40/ced4da/6c757d', alt='...')
-                                            .small
-                                                .fw-bold Kelly Rowan
-                                                .text-muted March 12, 2023 &middot; 6 min read
-                        .col-lg-4.mb-5
-                            .card.h-100.shadow.border-0
-                                img.card-img-top(src='https://dummyimage.com/600x350/adb5bd/495057', alt='...')
-                                .card-body.p-4
-                                    .badge.bg-primary.bg-gradient.rounded-pill.mb-2 Media
-                                    a.text-decoration-none.link-dark.stretched-link(href='#!')
-                                        h5.card-title.mb-3 Another blog post title
-                                    p.card-text.mb-0
-                                        | This text is a bit longer to illustrate the adaptive height of each card. Some quick example text to build on the card title and make up the bulk of the card's content.
-                                .card-footer.p-4.pt-0.bg-transparent.border-top-0
-                                    .d-flex.align-items-end.justify-content-between
-                                        .d-flex.align-items-center
-                                            img.rounded-circle.me-3(src='https://dummyimage.com/40x40/ced4da/6c757d', alt='...')
-                                            .small
-                                                .fw-bold Josiah Barclay
-                                                .text-muted March 23, 2023 &middot; 4 min read
-                        .col-lg-4.mb-5
-                            .card.h-100.shadow.border-0
-                                img.card-img-top(src='https://dummyimage.com/600x350/6c757d/343a40', alt='...')
-                                .card-body.p-4
-                                    .badge.bg-primary.bg-gradient.rounded-pill.mb-2 News
-                                    a.text-decoration-none.link-dark.stretched-link(href='#!')
-                                        h5.card-title.mb-3 The last blog post title is a little bit longer than the others
-                                    p.card-text.mb-0
-                                        | Some more quick example text to build on the card title and make up the bulk of the card's content.
-                                .card-footer.p-4.pt-0.bg-transparent.border-top-0
-                                    .d-flex.align-items-end.justify-content-between
-                                        .d-flex.align-items-center
-                                            img.rounded-circle.me-3(src='https://dummyimage.com/40x40/ced4da/6c757d', alt='...')
-                                            .small
-                                                .fw-bold Evelyn Martinez
-                                                .text-muted April 2, 2023 &middot; 10 min read
+                    .row.gx-5.align-items-center
+                        .col-lg-5.mb-4.mb-lg-0
+                            .eyebrow.mb-2 Scenarios
+                            h2.fw-bolder.mb-3 连接关键算力场景
+                            p.text-muted.mb-0 从云数据中心到智能边缘，云芯互联以芯片级创新支撑更高效、更稳定的智能计算网络。
+                        .col-lg-7
+                            .row.g-3
+                                .col-sm-6
+                                    .stat-card.p-4
+                                        h3.h5.fw-bold 云数据中心
+                                        p.text-muted.mb-0 高密度服务器集群互联与东西向流量优化。
+                                .col-sm-6
+                                    .stat-card.p-4
+                                        h3.h5.fw-bold AI 训练集群
+                                        p.text-muted.mb-0 面向大规模并行计算的高速网络底座。
+                                .col-sm-6
+                                    .stat-card.p-4
+                                        h3.h5.fw-bold 智能边缘
+                                        p.text-muted.mb-0 支撑边缘节点低时延接入与数据处理。
+                                .col-sm-6
+                                    .stat-card.p-4
+                                        h3.h5.fw-bold 企业网络基础设施
+                                        p.text-muted.mb-0 为行业客户提供可靠、可运维的网络能力。
 
-                    // Call to action
-                    aside.bg-primary.bg-gradient.rounded-3.p-4.p-sm-5.mt-5
+            // CTA section
+            section.py-5.section-muted
+                .container.px-5.my-5
+                    .rounded-3.p-4.p-sm-5.hero-tech
                         .d-flex.align-items-center.justify-content-between.flex-column.flex-xl-row.text-center.text-xl-start
                             .mb-4.mb-xl-0
-                                .fs-3.fw-bold.text-white New products, delivered to you.
-                                .text-white-50 Sign up for our newsletter for the latest updates.
-                            .ms-xl-4
-                                .input-group.mb-2
-                                    input.form-control(type='text', placeholder='Email address...', aria-label='Email address...', aria-describedby='button-newsletter')
-                                    button#button-newsletter.btn.btn-outline-light(type='button') Sign up
-                                .small.text-white-50 We care about privacy, and will never share your data.
+                                .fs-3.fw-bold 携手构建下一代智能计算基础设施
+                                .text-white-50 了解产品能力、联合验证或商务合作，请与我们联系。
+                            a.btn.btn-outline-light.btn-lg.px-4(href='contact.html') 联系我们
 
         // Footer
         include includes/footer.pug

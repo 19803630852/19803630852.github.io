@@ -1,14 +1,14 @@
 doctype html
-html(lang='en')
+html(lang='zh-CN')
 
     head
 
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-        meta(name='description', content='')
-        meta(name='author', content='')
+        meta(name='description', content='云芯互联服务支持与合作伙伴计划。')
+        meta(name='author', content='云芯互联')
 
-        title Modern Business - Start Bootstrap Template
+        title 服务支持 - 云芯互联
 
         // Favicon
         link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
@@ -22,121 +22,69 @@ html(lang='en')
             // Navigation
             include includes/navbar.pug
 
-            // Pricing section
-            section.bg-light.py-5
+            // Support section
+            header.page-hero.py-5
+                .container.px-5.py-5
+                    .row.justify-content-center
+                        .col-lg-8.text-center
+                            .eyebrow.mb-3 Support
+                            h1.display-5.fw-bolder.mb-3 服务支持
+                            p.lead.text-white-50.mb-0 为客户提供从方案咨询、联合验证到量产导入的全流程工程支持。
+
+            section.py-5
                 .container.px-5.my-5
-                    .text-center.mb-5
-                        h1.fw-bolder Pay as you grow
-                        p.lead.fw-normal.text-muted.mb-0 With our no hassle pricing plans
                     .row.gx-5.justify-content-center
-                        // Pricing card free
-                        .col-lg-6.col-xl-4
-                            .card.mb-5.mb-xl-0
+                        .col-lg-6.col-xl-4.mb-4
+                            .card.tech-card.h-100.border-0.shadow-sm
                                 .card-body.p-5
-                                    .small.text-uppercase.fw-bold.text-muted Free
-                                    .mb-3
-                                        span.display-4.fw-bold $0
-                                        span.text-muted / mo.
-                                    ul.list-unstyled.mb-4
+                                    .small.text-uppercase.fw-bold.text-primary 01
+                                    h2.h4.fw-bold.my-3 方案咨询
+                                    p.text-muted 梳理业务需求、技术指标和部署场景，形成可验证的芯片与系统方案。
+                                    ul.list-unstyled.text-muted.mb-4
                                         li.mb-2
-                                            i.bi.bi-check.text-primary
-                                            strong 1 users
+                                            i.bi.bi-check.text-primary.me-2
+                                            | 场景需求分析
                                         li.mb-2
-                                            i.bi.bi-check.text-primary
-                                            | 5GB storage
-                                        li.mb-2
-                                            i.bi.bi-check.text-primary
-                                            | Unlimited public projects
-                                        li.mb-2
-                                            i.bi.bi-check.text-primary
-                                            | Community access
-                                        li.mb-2.text-muted
-                                            i.bi.bi-x
-                                            | Unlimited private projects
-                                        li.mb-2.text-muted
-                                            i.bi.bi-x
-                                            | Dedicated support
-                                        li.mb-2.text-muted
-                                            i.bi.bi-x
-                                            | Free linked domain
-                                        li.text-muted
-                                            i.bi.bi-x
-                                            | Monthly status reports
-                                    .d-grid
-                                        a.btn.btn-outline-primary(href='#!') Choose plan
-                        // Pricing card pro
-                        .col-lg-6.col-xl-4
-                            .card.mb-5.mb-xl-0
+                                            i.bi.bi-check.text-primary.me-2
+                                            | 技术路线评估
+                                        li
+                                            i.bi.bi-check.text-primary.me-2
+                                            | 方案资料支持
+                                    a.btn.btn-outline-primary(href='contact.html') 联系咨询
+                        .col-lg-6.col-xl-4.mb-4
+                            .card.tech-card.h-100.border-0.shadow-sm
                                 .card-body.p-5
-                                    .small.text-uppercase.fw-bold
-                                        i.bi.bi-star-fill.text-warning
-                                        | Pro
-                                    .mb-3
-                                        span.display-4.fw-bold $9
-                                        span.text-muted / mo.
-                                    ul.list-unstyled.mb-4
+                                    .small.text-uppercase.fw-bold.text-primary 02
+                                    h2.h4.fw-bold.my-3 联合验证
+                                    p.text-muted 与客户和生态伙伴共同完成软硬件适配、性能测试和可靠性验证。
+                                    ul.list-unstyled.text-muted.mb-4
                                         li.mb-2
-                                            i.bi.bi-check.text-primary
-                                            strong 5 users
+                                            i.bi.bi-check.text-primary.me-2
+                                            | 样机与平台适配
                                         li.mb-2
-                                            i.bi.bi-check.text-primary
-                                            | 5GB storage
-                                        li.mb-2
-                                            i.bi.bi-check.text-primary
-                                            | Unlimited public projects
-                                        li.mb-2
-                                            i.bi.bi-check.text-primary
-                                            | Community access
-                                        li.mb-2
-                                            i.bi.bi-check.text-primary
-                                            | Unlimited private projects
-                                        li.mb-2
-                                            i.bi.bi-check.text-primary
-                                            | Dedicated support
-                                        li.mb-2
-                                            i.bi.bi-check.text-primary
-                                            | Free linked domain
-                                        li.text-muted
-                                            i.bi.bi-x
-                                            | Monthly status reports
-                                    .d-grid
-                                        a.btn.btn-primary(href='#!') Choose plan
-                        // Pricing card enterprise
-                        .col-lg-6.col-xl-4
-                            .card
+                                            i.bi.bi-check.text-primary.me-2
+                                            | 性能与压力测试
+                                        li
+                                            i.bi.bi-check.text-primary.me-2
+                                            | 问题定位与优化
+                                    a.btn.btn-primary(href='contact.html') 申请合作
+                        .col-lg-6.col-xl-4.mb-4
+                            .card.tech-card.h-100.border-0.shadow-sm
                                 .card-body.p-5
-                                    .small.text-uppercase.fw-bold.text-muted Enterprise
-                                    .mb-3
-                                        span.display-4.fw-bold $49
-                                        span.text-muted / mo.
-                                    ul.list-unstyled.mb-4
+                                    .small.text-uppercase.fw-bold.text-primary 03
+                                    h2.h4.fw-bold.my-3 量产支持
+                                    p.text-muted 支持客户导入、版本迭代、现场部署和长期运维反馈闭环。
+                                    ul.list-unstyled.text-muted.mb-4
                                         li.mb-2
-                                            i.bi.bi-check.text-primary
-                                            strong Unlimited users
+                                            i.bi.bi-check.text-primary.me-2
+                                            | 导入计划制定
                                         li.mb-2
-                                            i.bi.bi-check.text-primary
-                                            | 5GB storage
-                                        li.mb-2
-                                            i.bi.bi-check.text-primary
-                                            | Unlimited public projects
-                                        li.mb-2
-                                            i.bi.bi-check.text-primary
-                                            | Community access
-                                        li.mb-2
-                                            i.bi.bi-check.text-primary
-                                            | Unlimited private projects
-                                        li.mb-2
-                                            i.bi.bi-check.text-primary
-                                            | Dedicated support
-                                        li.mb-2
-                                            i.bi.bi-check.text-primary
-                                            strong Unlimited
-                                            | linked domains
-                                        li.text-muted
-                                            i.bi.bi-check.text-primary
-                                            | Monthly status reports
-                                    .d-grid
-                                        a.btn.btn-outline-primary(href='#!') Choose plan
+                                            i.bi.bi-check.text-primary.me-2
+                                            | 版本迭代支持
+                                        li
+                                            i.bi.bi-check.text-primary.me-2
+                                            | 长期技术协作
+                                    a.btn.btn-outline-primary(href='contact.html') 获取支持
 
         // Footer
         include includes/footer.pug

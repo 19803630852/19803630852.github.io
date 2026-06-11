@@ -1,14 +1,14 @@
 doctype html
-html(lang='en')
+html(lang='zh-CN')
 
     head
 
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-        meta(name='description', content='')
-        meta(name='author', content='')
+        meta(name='description', content='云芯互联产品与方案，覆盖数据中心互联芯片、智能网卡/DPU、高速以太网交换和边缘网络加速。')
+        meta(name='author', content='云芯互联')
 
-        title Modern Business - Start Bootstrap Template
+        title 产品与方案 - 云芯互联
 
         // Favicon
         link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
@@ -22,35 +22,74 @@ html(lang='en')
             // Navigation
             include includes/navbar.pug
 
-            // Page Content
+            // Page Header
+            header.page-hero.py-5
+                .container.px-5.py-5
+                    .row.justify-content-center
+                        .col-lg-9.text-center
+                            .eyebrow.mb-3 Products & Solutions
+                            h1.display-5.fw-bolder.mb-3 产品与方案
+                            p.lead.text-white-50.mb-0 面向云数据中心、AI 集群和边缘网络，打造高性能、低时延、可扩展的互联芯片与系统方案。
+
+            // Solutions
             section.py-5
                 .container.px-5.my-5
-                    .text-center.mb-5
-                        h1.fw-bolder Our Work
-                        p.lead.fw-normal.text-muted.mb-0 Company portfolio
+                    .row.gx-5.gy-4
+                        .col-lg-6
+                            .card.tech-card.h-100.border-0.shadow-sm
+                                .gradient-panel.rounded-bottom-0
+                                .card-body.p-4.p-lg-5
+                                    .badge.bg-primary.bg-gradient.rounded-pill.mb-3 Chip
+                                    h2.h4.fw-bold 数据中心网络互联芯片
+                                    p.text-muted 面向云数据中心高密度服务器集群，提供高带宽、低时延、低功耗的网络互联能力。
+                                    ul.text-muted.mb-4
+                                        li 多带宽演进路线，适配不同集群规模
+                                        li 面向东西向流量的转发与队列优化
+                                        li 支持系统级可观测与可靠性设计
+                                    a.btn.btn-outline-primary(href='contact.html') 咨询方案
+                        .col-lg-6
+                            .card.tech-card.h-100.border-0.shadow-sm
+                                .gradient-panel.rounded-bottom-0
+                                .card-body.p-4.p-lg-5
+                                    .badge.bg-primary.bg-gradient.rounded-pill.mb-3 Acceleration
+                                    h2.h4.fw-bold 智能网卡 / DPU 方案
+                                    p.text-muted 通过网络、存储、安全等任务卸载，释放主机 CPU 算力，提升云基础设施效率。
+                                    ul.text-muted.mb-4
+                                        li 可编程数据平面与硬件卸载能力
+                                        li 支持虚拟化、容器和裸金属场景
+                                        li SDK 与工具链支撑快速集成
+                                    a.btn.btn-outline-primary(href='contact.html') 联合验证
+                        .col-lg-6
+                            .card.tech-card.h-100.border-0.shadow-sm
+                                .gradient-panel.rounded-bottom-0
+                                .card-body.p-4.p-lg-5
+                                    .badge.bg-primary.bg-gradient.rounded-pill.mb-3 Switching
+                                    h2.h4.fw-bold 高速以太网交换方案
+                                    p.text-muted 面向 AI 训练、分布式存储和云网络汇聚场景，提供高可靠转发与弹性扩展能力。
+                                    ul.text-muted.mb-4
+                                        li 支持高吞吐转发和低抖动网络体验
+                                        li 适配 ToR、汇聚和专用互联场景
+                                        li 支撑数据中心网络平滑升级
+                                    a.btn.btn-outline-primary(href='contact.html') 获取资料
+                        .col-lg-6
+                            .card.tech-card.h-100.border-0.shadow-sm
+                                .gradient-panel.rounded-bottom-0
+                                .card-body.p-4.p-lg-5
+                                    .badge.bg-primary.bg-gradient.rounded-pill.mb-3 Edge
+                                    h2.h4.fw-bold 边缘计算网络加速
+                                    p.text-muted 为边缘节点、行业网关和智能终端提供可靠接入、低时延处理和安全隔离能力。
+                                    ul.text-muted.mb-4
+                                        li 面向实时业务的低时延链路优化
+                                        li 云边协同部署与远程运维能力
+                                        li 适配工业、能源、交通等行业场景
+                                    a.btn.btn-outline-primary(href='contact.html') 了解合作
 
-                    .row.gx-5
-                        .col-lg-6
-                            .position-relative.mb-5
-                                img.img-fluid.rounded-3.mb-3(src='https://dummyimage.com/600x400/343a40/6c757d', alt='...')
-                                a.h3.fw-bolder.text-decoration-none.link-dark.stretched-link(href='#!') Project name
-                        .col-lg-6
-                            .position-relative.mb-5
-                                img.img-fluid.rounded-3.mb-3(src='https://dummyimage.com/600x400/343a40/6c757d', alt='...')
-                                a.h3.fw-bolder.text-decoration-none.link-dark.stretched-link(href='#!') Project name
-                        .col-lg-6
-                            .position-relative.mb-5.mb-lg-0
-                                img.img-fluid.rounded-3.mb-3(src='https://dummyimage.com/600x400/343a40/6c757d', alt='...')
-                                a.h3.fw-bolder.text-decoration-none.link-dark.stretched-link(href='#!') Project name
-                        .col-lg-6
-                            .position-relative
-                                img.img-fluid.rounded-3.mb-3(src='https://dummyimage.com/600x400/343a40/6c757d', alt='...')
-                                a.h3.fw-bolder.text-decoration-none.link-dark.stretched-link(href='#!') Project name
-            
-            section.py-5.bg-light
+            // CTA
+            section.py-5.section-muted
                 .container.px-5.my-5
-                    h2.display-4.fw-bolder.mb-4 Let's build something together
-                    a.btn.btn-lg.btn-primary(href='#!') Contact us
+                    h2.display-6.fw-bolder.mb-4 需要面向具体场景的芯片与系统方案？
+                    p.lead.text-muted.mb-4 我们可以与客户共同完成需求分析、方案评估、联合验证和量产导入。
+                    a.btn.btn-lg.btn-primary(href='contact.html') 联系商务团队
 
         // Footer
         include includes/footer.pug

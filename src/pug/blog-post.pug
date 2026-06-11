@@ -1,14 +1,14 @@
 doctype html
-html(lang='en')
+html(lang='zh-CN')
 
     head
 
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-        meta(name='description', content='')
-        meta(name='author', content='')
+        meta(name='description', content='云芯互联新闻详情：面向 AI 集群的高速互联参考方案。')
+        meta(name='author', content='云芯互联')
 
-        title Modern Business - Start Bootstrap Template
+        title 面向 AI 集群的高速互联参考方案 - 云芯互联
 
         // Favicon
         link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
@@ -29,11 +29,15 @@ html(lang='en')
                     .row.gx-5
 
                         .col-lg-3
-                            .d-flex.align-items-center.mt-lg-5.mb-4
-                                img.img-fluid.rounded-circle(src='https://dummyimage.com/50x50/ced4da/6c757d.jpg', alt='...')
-                                .ms-3
-                                    .fw-bold Valerie Luna
-                                    .text-muted News, Business
+                            .card.border-0.shadow-sm.mb-4
+                                .card-body.p-4
+                                    .fw-bold 云芯互联新闻中心
+                                    .text-muted 产品动态 · 技术文章
+                                    hr
+                                    .small.text-muted 发布日期
+                                    .fw-bold 2026年6月
+                                    .small.text-muted.mt-3 联系邮箱
+                                    a(href='mailto:media@cloudcore.example') media@cloudcore.example
 
                         .col-lg-9
 
@@ -42,73 +46,43 @@ html(lang='en')
 
                                 // Post header
                                 header.mb-4
+                                    a.text-decoration-none(href='blog-home.html')
+                                        i.bi.bi-arrow-left.me-1
+                                        | 返回新闻动态
+                                    h1.fw-bolder.mb-3.mt-3 云芯互联推出面向 AI 集群的高速互联参考方案
+                                    .text-muted.fst-italic.mb-3 2026年6月 · 产品动态
+                                    a.badge.bg-secondary.text-decoration-none.link-light.me-2(href='#!') AI 集群
+                                    a.badge.bg-secondary.text-decoration-none.link-light(href='#!') 高速互联
 
-                                    // Post title
-                                    h1.fw-bolder.mb-1 Welcome to Blog Post!
-
-                                    // Post meta content
-                                    .text-muted.fst-italic.mb-2 January 1, 2023
-
-                                    // Post categories
-                                    a.badge.bg-secondary.text-decoration-none.link-light(href='#!') Web Design
-                                    a.badge.bg-secondary.text-decoration-none.link-light(href='#!') Freebies
-
-                                // Preview image figure
+                                // Preview visual
                                 figure.mb-4
-                                    img.img-fluid.rounded(src='https://dummyimage.com/900x400/ced4da/6c757d.jpg', alt='...')
+                                    .news-visual.rounded
 
                                 // Post content
                                 section.mb-5
+                                    p.fs-5.mb-4 随着大模型训练、推理和多模态应用持续发展，AI 集群对网络基础设施提出了更高要求：更高带宽、更低时延、更强可观测能力以及更稳定的规模化部署体验。
+                                    p.fs-5.mb-4 云芯互联参考方案围绕数据中心互联芯片、智能网卡 / DPU 和系统软件工具链展开，帮助客户在方案评估阶段快速验证关键性能指标。
+                                    h2.fw-bolder.mb-4.mt-5 方案关注的关键能力
+                                    p.fs-5.mb-4 第一，面向东西向流量优化数据通路，降低跨节点通信开销；第二，通过硬件卸载释放主机 CPU 资源；第三，结合遥测与调试工具，提升集群运维效率。
+                                    p.fs-5.mb-4 在客户导入阶段，云芯互联可提供联合验证支持，包括场景建模、性能测试、问题定位和版本迭代建议。
+                                    h2.fw-bolder.mb-4.mt-5 面向产业生态的长期协作
+                                    p.fs-5.mb-4 高速互联芯片不是单点产品，而是连接服务器、交换网络、系统软件和上层业务的基础平台。云芯互联将持续与生态伙伴协作，共同推进智能算力网络基础设施演进。
+                                    .alert.alert-info.mt-5
+                                        strong 说明：
+                                        | 本页面为示例新闻稿，具体产品名称、指标和发布时间请替换为真实信息。
 
-                                    p.fs-5.mb-4 Science is an enterprise that should be cherished as an activity of the free human mind. Because it transforms who we are, how we live, and it gives us an understanding of our place in the universe.
-                                    p.fs-5.mb-4 The universe is large and old, and the ingredients for life as we know it are everywhere, so there's no reason to think that Earth would be unique in that regard. Whether of not the life became intelligent is a different question, and we'll see if we find that.
-                                    p.fs-5.mb-4 If you get asteroids about a kilometer in size, those are large enough and carry enough energy into our system to disrupt transportation, communication, the food chains, and that can be a really bad day on Earth.
-                                    h2.fw-bolder.mb-4.mt-5 I have odd cosmic thoughts every day
-                                    p.fs-5.mb-4 For me, the most fascinating interface is Twitter. I have odd cosmic thoughts every day and I realized I could hold them to myself or share them with people who might be interested.
-                                    p.fs-5.mb-4 Venus has a runaway greenhouse effect. I kind of want to know what happened there because we're twirling knobs here on Earth without knowing the consequences of it. Mars once had running water. It's bone dry today. Something bad happened there as well.
-
-                            // Comments section
+                            // Related links
                             section
-                                .card.bg-light
-                                    .card-body
-
-                                        // Comment form
-                                        form.mb-4
-                                            textarea.form-control(rows='3', placeholder='Join the discussion and leave a comment!')
-
-                                        // Comment with nested comments
-                                        .d-flex.mb-4
-
-                                            // Parent comment
-                                            .flex-shrink-0
-                                                img.rounded-circle(src='https://dummyimage.com/50x50/ced4da/6c757d.jpg', alt='...')
-                                            .ms-3
-                                                .fw-bold Commenter Name
-                                                | If you're going to lead a space frontier, it has to be government; it'll never be private enterprise. Because the space frontier is dangerous, and it's expensive, and it has unquantified risks.
-                                        
-                                                // Child comment 1
-                                                .d-flex.mt-4
-                                                    .flex-shrink-0
-                                                        img.rounded-circle(src='https://dummyimage.com/50x50/ced4da/6c757d.jpg', alt='...')
-                                                    .ms-3
-                                                        .fw-bold Commenter Name
-                                                        | And under those conditions, you cannot establish a capital-market evaluation of that enterprise. You can't get investors.
-
-                                                // Child comment 2
-                                                .d-flex.mt-4
-                                                    .flex-shrink-0
-                                                        img.rounded-circle(src='https://dummyimage.com/50x50/ced4da/6c757d.jpg', alt='...')
-                                                    .ms-3
-                                                        .fw-bold Commenter Name
-                                                        | When you put money directly to a problem, it makes a good headline.
-
-                                        // Single comment
-                                        .d-flex
-                                            .flex-shrink-0
-                                                img.rounded-circle(src='https://dummyimage.com/50x50/ced4da/6c757d.jpg', alt='...')
-                                            .ms-3
-                                                .fw-bold Commenter Name
-                                                | When I look at the universe and all the ways the universe wants to kill us, I find it hard to reconcile that with statements of beneficence.
+                                .card.section-muted.border-0
+                                    .card-body.p-4
+                                        h3.h5.fw-bold 了解更多
+                                        .row.g-3
+                                            .col-md-4
+                                                a.btn.btn-outline-primary.w-100(href='portfolio-overview.html') 产品与方案
+                                            .col-md-4
+                                                a.btn.btn-outline-primary.w-100(href='portfolio-item.html') 技术能力
+                                            .col-md-4
+                                                a.btn.btn-primary.w-100(href='contact.html') 联系我们
 
         // Footer
         include includes/footer.pug

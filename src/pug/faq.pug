@@ -1,14 +1,14 @@
 doctype html
-html(lang='en')
+html(lang='zh-CN')
 
     head
 
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-        meta(name='description', content='')
-        meta(name='author', content='')
+        meta(name='description', content='加入云芯互联，与我们一起构建下一代智能计算网络基础设施。')
+        meta(name='author', content='云芯互联')
 
-        title Modern Business - Start Bootstrap Template
+        title 加入我们 - 云芯互联
 
         // Favicon
         link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
@@ -23,99 +23,78 @@ html(lang='en')
             include includes/navbar.pug
 
             // Page Content
+            header.page-hero.py-5
+                .container.px-5.py-5
+                    .row.justify-content-center
+                        .col-lg-8.text-center
+                            .eyebrow.mb-3 Careers
+                            h1.display-5.fw-bolder.mb-3 加入我们
+                            p.lead.text-white-50.mb-0 与跨学科研发团队一起，把高速互联芯片能力带入真实产业场景。
+
             section.py-5
                 .container.px-5.my-5
                     .text-center.mb-5
-                        h1.fw-bolder Frequently Asked Questions
-                        p.lead.fw-normal.text-muted.mb-0 How can we help you?
+                        h2.fw-bolder 为什么加入云芯互联
+                        p.lead.text-muted.mb-0 在芯片、软件和系统交叉领域解决有挑战的问题。
+                    .row.gx-4.row-cols-1.row-cols-md-3
+                        .col.mb-4
+                            .card.tech-card.h-100.border-0.shadow-sm
+                                .card-body.p-4
+                                    h3.h5.fw-bold 前沿芯片研发
+                                    p.text-muted.mb-0 参与高速互联、DPU、以太网交换等核心技术方向。
+                        .col.mb-4
+                            .card.tech-card.h-100.border-0.shadow-sm
+                                .card-body.p-4
+                                    h3.h5.fw-bold 开放协作文化
+                                    p.text-muted.mb-0 与架构、验证、软件和方案团队紧密协作。
+                        .col.mb-4
+                            .card.tech-card.h-100.border-0.shadow-sm
+                                .card-body.p-4
+                                    h3.h5.fw-bold 面向产业落地
+                                    p.text-muted.mb-0 让技术在数据中心、AI 集群和边缘场景中产生价值。
+
+            section.py-5.section-muted
+                .container.px-5.my-5
                     .row.gx-5
                         .col-xl-8
-                            // FAQ Accordion 1
-                            h2.fw-bolder.mb-3 Account &amp; Billing
-                            #accordionExample.accordion.mb-5
+                            h2.fw-bolder.mb-4 热招岗位
+                            #accordionCareers.accordion.mb-5.mb-xl-0
                                 .accordion-item
                                     h3#headingOne.accordion-header
-                                        button.accordion-button(type='button' data-bs-toggle='collapse' data-bs-target='#collapseOne' aria-expanded='true' aria-controls='collapseOne')
-                                            | Accordion Item #1
-                                    #collapseOne.accordion-collapse.collapse.show(aria-labelledby='headingOne' data-bs-parent='#accordionExample')
+                                        button.accordion-button(type='button' data-bs-toggle='collapse' data-bs-target='#collapseOne' aria-expanded='true' aria-controls='collapseOne') 芯片架构工程师
+                                    #collapseOne.accordion-collapse.collapse.show(aria-labelledby='headingOne' data-bs-parent='#accordionCareers')
                                         .accordion-body
-                                            strong This is the first item's accordion body.
-                                            |  It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the 
-                                            code .accordion-body
-                                            | , though the transition does limit overflow.
+                                            | 负责高速网络互联芯片架构设计、性能建模和关键模块定义。希望你熟悉计算机体系结构、网络协议或 SoC 设计流程。
                                 .accordion-item
                                     h3#headingTwo.accordion-header
-                                        button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapseTwo' aria-expanded='false' aria-controls='collapseTwo')
-                                            | Accordion Item #2
-                                    #collapseTwo.accordion-collapse.collapse(aria-labelledby='headingTwo' data-bs-parent='#accordionExample')
+                                        button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapseTwo' aria-expanded='false' aria-controls='collapseTwo') 验证工程师
+                                    #collapseTwo.accordion-collapse.collapse(aria-labelledby='headingTwo' data-bs-parent='#accordionCareers')
                                         .accordion-body
-                                            strong This is the second item's accordion body.
-                                            |  It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the 
-                                            code .accordion-body
-                                            | , though the transition does limit overflow.
+                                            | 负责模块级、系统级验证环境搭建，推动覆盖率、随机验证和回归流程完善。
                                 .accordion-item
                                     h3#headingThree.accordion-header
-                                        button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapseThree' aria-expanded='false' aria-controls='collapseThree')
-                                            | Accordion Item #3
-                                    #collapseThree.accordion-collapse.collapse(aria-labelledby='headingThree' data-bs-parent='#accordionExample')
+                                        button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapseThree' aria-expanded='false' aria-controls='collapseThree') 嵌入式软件工程师
+                                    #collapseThree.accordion-collapse.collapse(aria-labelledby='headingThree' data-bs-parent='#accordionCareers')
                                         .accordion-body
-                                            strong This is the third item's accordion body.
-                                            |  It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the 
-                                            code .accordion-body
-                                            | , though the transition does limit overflow.
-
-                            // FAQ Accordion 2
-                            h2.fw-bolder.mb-3 Website Issues
-                            #accordionExample2.accordion.mb-5.mb-xl-0
+                                            | 负责驱动、SDK、诊断工具和系统集成支持，帮助客户快速完成平台适配。
                                 .accordion-item
-                                    h3#headingOne.accordion-header
-                                        button.accordion-button(type='button' data-bs-toggle='collapse' data-bs-target='#collapseOne2' aria-expanded='true' aria-controls='collapseOne2')
-                                            | Accordion Item #1
-                                    #collapseOne2.accordion-collapse.collapse.show(aria-labelledby='headingOne' data-bs-parent='#accordionExample2')
+                                    h3#headingFour.accordion-header
+                                        button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapseFour' aria-expanded='false' aria-controls='collapseFour') 解决方案工程师
+                                    #collapseFour.accordion-collapse.collapse(aria-labelledby='headingFour' data-bs-parent='#accordionCareers')
                                         .accordion-body
-                                            strong This is the first item's accordion body.
-                                            |  It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the 
-                                            code .accordion-body
-                                            | , though the transition does limit overflow.
-                                .accordion-item
-                                    h3#headingTwo.accordion-header
-                                        button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapseTwo2' aria-expanded='false' aria-controls='collapseTwo2')
-                                            | Accordion Item #2
-                                    #collapseTwo2.accordion-collapse.collapse(aria-labelledby='headingTwo' data-bs-parent='#accordionExample2')
-                                        .accordion-body
-                                            strong This is the second item's accordion body.
-                                            |  It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the 
-                                            code .accordion-body
-                                            | , though the transition does limit overflow.
-                                .accordion-item
-                                    h3#headingThree.accordion-header
-                                        button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapseThree2' aria-expanded='false' aria-controls='collapseThree2')
-                                            | Accordion Item #3
-                                    #collapseThree2.accordion-collapse.collapse(aria-labelledby='headingThree' data-bs-parent='#accordionExample2')
-                                        .accordion-body
-                                            strong This is the third item's accordion body.
-                                            |  It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the 
-                                            code .accordion-body
-                                            | , though the transition does limit overflow.
+                                            | 面向客户场景开展需求分析、联合测试、性能调优和问题定位，连接产品与真实业务。
                         .col-xl-4
-                            .card.border-0.bg-light.mt-xl-5
+                            .card.border-0.shadow-sm.mt-xl-5
                                 .card-body.p-4.py-lg-5
-                                    .d-flex.align-items-center.justify-content-center
-                                        .text-center
-                                            .h6.fw-bolder Have more questions?
-                                            p.text-muted.mb-4
-                                                | Contact us at
-                                                br
-                                                a(href='#!') support@domain.com
-                                            .h6.fw-bolder Follow us
-                                            a.fs-5.px-2.link-dark(href='#!')
-                                                i.bi-twitter
-                                            a.fs-5.px-2.link-dark(href='#!')
-                                                i.bi-facebook
-                                            a.fs-5.px-2.link-dark(href='#!')
-                                                i.bi-linkedin
-                                            a.fs-5.px-2.link-dark(href='#!')
-                                                i.bi-youtube
+                                    .text-center
+                                        .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-3
+                                            i.bi.bi-briefcase
+                                        .h5.fw-bolder 投递简历
+                                        p.text-muted.mb-4
+                                            | 请将简历发送至
+                                            br
+                                            a(href='mailto:hr@cloudcore.example') hr@cloudcore.example
+                                        a.btn.btn-primary(href='mailto:hr@cloudcore.example?subject=应聘云芯互联岗位') 发送邮件
 
         // Footer
         include includes/footer.pug
