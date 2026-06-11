@@ -5,17 +5,17 @@ html(lang='zh-CN')
 
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-        meta(name='description', content='联系云芯互联，进行商务合作、技术支持、媒体联系或招聘沟通。')
-        meta(name='author', content='云芯互联')
+        meta(name='description', content='联系上海亚格之芯科技有限公司，地址：上海市闵行区浦江科技广场，邮箱：yuying.lei@yuccacloud.com。')
+        meta(name='author', content='上海亚格之芯科技有限公司')
 
-        title 联系我们 - 云芯互联
+        title 联系我们 - 上海亚格之芯科技有限公司
 
         // Favicon
         link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
 
         include includes/css.pug
 
-    body.d-flex.flex-column
+    body.d-flex.flex-column.h-100
 
         main.flex-shrink-0
 
@@ -23,81 +23,66 @@ html(lang='zh-CN')
             include includes/navbar.pug
 
             // Page header
-            header.page-hero.py-5
-                .container.px-5.py-5
+            header.page-hero.py-4
+                .container.px-5
                     .row.justify-content-center
                         .col-lg-8.text-center
-                            .eyebrow.mb-3 Contact
-                            h1.display-5.fw-bolder.mb-3 联系我们
-                            p.lead.text-white-50.mb-0 如果你关注高速互联芯片、智能算力基础设施或产业合作，欢迎与我们沟通。
+                            h1.display-6.fw-bolder.mb-3 联系我们
+                            p.lead.text-white-50.mb-0 如果你关注 Yucca DPU、Yucca SuperNIC、智算中心网络或产品合作，欢迎联系上海亚格之芯科技有限公司。
 
-            // Contact form
-            section.py-5
-                .container.px-5
-                    .row.gx-5
-                        .col-lg-7.mb-5.mb-lg-0
-                            .section-muted.rounded-3.py-5.px-4.px-md-5
-                                .mb-4
+            // Contact information
+            section.py-4
+                .container.px-5.my-4
+                    .row.gx-5.align-items-center.mb-5
+                        .col-lg-6.mb-4.mb-lg-0
+                            h2.fw-bolder.mb-4 产品咨询与商务合作
+                            p.lead.text-muted.mb-0 围绕 Yucca DPU、Yucca SuperNIC、数据中心网络和智算中心场景，如需产品资料、技术交流或合作沟通，请通过右侧邮箱联系我们。
+                        .col-lg-6
+                            .section-muted.rounded-3.p-4.p-lg-5
+                                h3.h5.fw-bold.mb-4 联系信息
+                                ul.list-unstyled.text-muted.mb-0
+                                    li.mb-3
+                                        i.bi.bi-building.me-2.text-primary
+                                        strong.text-dark 公司名称：
+                                        | 上海亚格之芯科技有限公司
+                                    li.mb-3
+                                        i.bi.bi-geo-alt.me-2.text-primary
+                                        strong.text-dark 地址：
+                                        | 上海市闵行区浦江科技广场
+                                    li
+                                        i.bi.bi-envelope.me-2.text-primary
+                                        strong.text-dark 邮箱：
+                                        a(href='mailto:yuying.lei@yuccacloud.com') yuying.lei@yuccacloud.com
+
+                    .row.gx-4.row-cols-1.row-cols-md-2.row-cols-xl-4
+                        .col.mb-4
+                            .card.tech-card.h-100.border-0.shadow-sm
+                                .card-body.p-4
                                     .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-3
-                                        i.bi.bi-envelope
-                                    h2.fw-bolder 商务与技术咨询
-                                    p.text-muted.mb-0 当前为静态表单示例，默认不会提交数据；如需真实提交，可后续接入后端或第三方表单服务。
-                                form
-                                    .row.gx-3
-                                        .col-md-6
-                                            .form-floating.mb-3
-                                                input#name.form-control(type='text', placeholder='请输入姓名')
-                                                label(for='name') 姓名
-                                        .col-md-6
-                                            .form-floating.mb-3
-                                                input#company.form-control(type='text', placeholder='请输入公司名称')
-                                                label(for='company') 公司
-                                    .row.gx-3
-                                        .col-md-6
-                                            .form-floating.mb-3
-                                                input#email.form-control(type='email', placeholder='name@example.com')
-                                                label(for='email') 邮箱
-                                        .col-md-6
-                                            .form-floating.mb-3
-                                                input#phone.form-control(type='tel', placeholder='联系电话')
-                                                label(for='phone') 电话
-                                    .form-floating.mb-3
-                                        select#type.form-select
-                                            option(selected) 商务合作
-                                            option 技术支持
-                                            option 媒体联系
-                                            option 加入我们
-                                        label(for='type') 需求类型
-                                    .form-floating.mb-3
-                                        textarea#message.form-control(type='text', placeholder='请描述您的需求', style='height: 10rem;')
-                                        label(for='message') 留言
-                                    .d-grid
-                                        a.btn.btn-primary.btn-lg(href='mailto:contact@cloudcore.example?subject=云芯互联官网咨询') 通过邮件发送需求
-                        .col-lg-5
-                            .row.g-4
-                                .col-12
-                                    .card.tech-card.border-0.shadow-sm
-                                        .card-body.p-4
-                                            h3.h5.fw-bold 商务合作
-                                            p.text-muted.mb-2 产品资料、联合验证、客户导入等合作沟通。
-                                            a(href='mailto:contact@cloudcore.example') contact@cloudcore.example
-                                .col-12
-                                    .card.tech-card.border-0.shadow-sm
-                                        .card-body.p-4
-                                            h3.h5.fw-bold 技术支持
-                                            p.text-muted.mb-2 SDK、驱动、系统调试和方案适配支持。
-                                            a(href='mailto:support@cloudcore.example') support@cloudcore.example
-                                .col-12
-                                    .card.tech-card.border-0.shadow-sm
-                                        .card-body.p-4
-                                            h3.h5.fw-bold 媒体联系
-                                            p.text-muted.mb-2 新闻采访、品牌资料和行业活动沟通。
-                                            a(href='mailto:media@cloudcore.example') media@cloudcore.example
-                                .col-12
-                                    .card.tech-card.border-0.shadow-sm
-                                        .card-body.p-4
-                                            h3.h5.fw-bold 办公地址
-                                            p.text-muted.mb-0 中国上海市浦东新区 · 示例地址
+                                        i.bi.bi-cpu
+                                    h3.h5.fw-bold Yucca DPU 咨询
+                                    p.text-muted.mb-0 了解弹性裸金属、网络存储优化、虚拟化加速和管控适配能力。
+                        .col.mb-4
+                            .card.tech-card.h-100.border-0.shadow-sm
+                                .card-body.p-4
+                                    .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-3
+                                        i.bi.bi-diagram-3
+                                    h3.h5.fw-bold Yucca SuperNIC 咨询
+                                    p.text-muted.mb-0 了解 AI 训练网络、GPU Direct RDMA、RoCEv2、UEC 和高带宽低延迟能力。
+                        .col.mb-4
+                            .card.tech-card.h-100.border-0.shadow-sm
+                                .card-body.p-4
+                                    .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-3
+                                        i.bi.bi-people
+                                    h3.h5.fw-bold 产品合作
+                                    p.text-muted.mb-0 面向数据中心、智算中心和 AI 服务器网络环境开展合作沟通。
+                        .col.mb-4
+                            .card.tech-card.h-100.border-0.shadow-sm
+                                .card-body.p-4
+                                    .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-3
+                                        i.bi.bi-chat-dots
+                                    h3.h5.fw-bold 技术交流
+                                    p.text-muted.mb-0 围绕 RDMA、OVS Offload、Ceph、iSCSI、libvirt 和 CNI 等技术交流。
 
         // Footer
         include includes/footer.pug

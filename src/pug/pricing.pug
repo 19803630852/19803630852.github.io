@@ -5,17 +5,17 @@ html(lang='zh-CN')
 
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-        meta(name='description', content='云芯互联服务支持与合作伙伴计划。')
-        meta(name='author', content='云芯互联')
+        meta(name='description', content='亚格之芯服务支持：产品资料、技术交流、方案适配与系统集成。')
+        meta(name='author', content='上海亚格之芯科技有限公司')
 
-        title 服务支持 - 云芯互联
+        title 服务支持 - 上海亚格之芯科技有限公司
 
         // Favicon
         link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
 
         include includes/css.pug
 
-    body.d-flex.flex-column
+    body.d-flex.flex-column.h-100
 
         main.flex-shrink-0
 
@@ -23,67 +23,66 @@ html(lang='zh-CN')
             include includes/navbar.pug
 
             // Support section
-            header.page-hero.py-5
-                .container.px-5.py-5
+            header.page-hero.py-4
+                .container.px-5
                     .row.justify-content-center
                         .col-lg-8.text-center
-                            .eyebrow.mb-3 Support
-                            h1.display-5.fw-bolder.mb-3 服务支持
-                            p.lead.text-white-50.mb-0 为客户提供从方案咨询、联合验证到量产导入的全流程工程支持。
+                            h1.display-6.fw-bolder.mb-3 服务支持
+                            p.lead.text-white-50.mb-0 围绕 Yucca DPU 与 Yucca SuperNIC，为数据中心和智算中心场景提供产品资料、技术交流与系统适配支持。
 
-            section.py-5
-                .container.px-5.my-5
+            section.py-4
+                .container.px-5.my-4
                     .row.gx-5.justify-content-center
                         .col-lg-6.col-xl-4.mb-4
                             .card.tech-card.h-100.border-0.shadow-sm
                                 .card-body.p-5
                                     .small.text-uppercase.fw-bold.text-primary 01
-                                    h2.h4.fw-bold.my-3 方案咨询
-                                    p.text-muted 梳理业务需求、技术指标和部署场景，形成可验证的芯片与系统方案。
+                                    h2.h4.fw-bold.my-3 产品资料
+                                    p.text-muted 获取 Yucca DPU、Yucca SuperNIC 的产品能力、接口特性和应用场景说明。
                                     ul.list-unstyled.text-muted.mb-4
                                         li.mb-2
                                             i.bi.bi-check.text-primary.me-2
-                                            | 场景需求分析
+                                            | DPU 弹性裸金属能力
                                         li.mb-2
                                             i.bi.bi-check.text-primary.me-2
-                                            | 技术路线评估
+                                            | SuperNIC 高带宽低延迟能力
                                         li
                                             i.bi.bi-check.text-primary.me-2
-                                            | 方案资料支持
+                                            | RDMA / OVS / 存储支持能力
                                     a.btn.btn-outline-primary(href='contact.html') 联系咨询
                         .col-lg-6.col-xl-4.mb-4
                             .card.tech-card.h-100.border-0.shadow-sm
                                 .card-body.p-5
                                     .small.text-uppercase.fw-bold.text-primary 02
-                                    h2.h4.fw-bold.my-3 联合验证
-                                    p.text-muted 与客户和生态伙伴共同完成软硬件适配、性能测试和可靠性验证。
+                                    h2.h4.fw-bold.my-3 技术交流
+                                    p.text-muted 围绕 SRIOV、OVS Offload、Ceph、iSCSI、GPU Direct RDMA、RoCEv2、UEC 等技术开展沟通。
                                     ul.list-unstyled.text-muted.mb-4
                                         li.mb-2
                                             i.bi.bi-check.text-primary.me-2
-                                            | 样机与平台适配
+                                            | 网络存储优化
                                         li.mb-2
                                             i.bi.bi-check.text-primary.me-2
-                                            | 性能与压力测试
+                                            | AI 加速与虚拟化加速
                                         li
                                             i.bi.bi-check.text-primary.me-2
-                                            | 问题定位与优化
-                                    a.btn.btn-primary(href='contact.html') 申请合作
+                                            | libvirt / CNI 管控适配
+                                    a.btn.btn-primary(href='contact.html') 申请交流
                         .col-lg-6.col-xl-4.mb-4
                             .card.tech-card.h-100.border-0.shadow-sm
                                 .card-body.p-5
                                     .small.text-uppercase.fw-bold.text-primary 03
-                                    h2.h4.fw-bold.my-3 量产支持
-                                    p.text-muted 支持客户导入、版本迭代、现场部署和长期运维反馈闭环。
+                                    h2.h4.fw-bold.my-3 方案适配
+                                    p.text-muted 面向各类 AI 服务器及网络环境，支持系统集成、功能升级和性能演进。
                                     ul.list-unstyled.text-muted.mb-4
                                         li.mb-2
                                             i.bi.bi-check.text-primary.me-2
-                                            | 导入计划制定
+                                            | PCIe Gen5x16 Host 接口
                                         li.mb-2
                                             i.bi.bi-check.text-primary.me-2
-                                            | 版本迭代支持
+                                            | Virtio Net 设备类型
                                         li
                                             i.bi.bi-check.text-primary.me-2
-                                            | 长期技术协作
+                                            | Adaptive routing 等演进方向
                                     a.btn.btn-outline-primary(href='contact.html') 获取支持
 
         // Footer
