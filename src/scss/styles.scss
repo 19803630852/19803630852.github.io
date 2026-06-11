@@ -8,16 +8,22 @@ html {
 }
 
 :root {
-    --corporate-navy: #06162e;
-    --corporate-navy-2: #071f44;
-    --corporate-blue: #0b5ed7;
-    --corporate-cyan: #18b7ff;
-    --corporate-slate: #5f6f89;
-    --corporate-light: #f5f8fc;
+    --corporate-navy: #06277f;
+    --corporate-navy-2: #0b2f63;
+    --corporate-blue: #1769e0;
+    --corporate-cyan: #21b7ff;
+    --corporate-slate: #516178;
+    --corporate-light: #f4f9ff;
+    --surface: #ffffff;
+    --surface-soft: #f8fbff;
+    --border-soft: rgba(6, 39, 127, 0.12);
 }
 
 body {
     color: #17233c;
+    background:
+        radial-gradient(circle at 8% 0%, rgba(33, 183, 255, 0.08), transparent 28rem),
+        linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
     font-family: "Inter", "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     line-height: 1.6;
 }
@@ -34,6 +40,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     height: 3rem;
     width: 3rem;
     font-size: 1.5rem;
+    box-shadow: 0 0.75rem 1.5rem rgba(23, 105, 224, 0.18);
 }
 
 // Background image for featured blog post
@@ -46,56 +53,89 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     min-height: 15rem;
 }
 
+// Invert dark logo to white on dark backgrounds
+.logo-dark-bg {
+    filter: brightness(0) invert(1);
+}
+
 .corporate-navbar {
-    background: rgba(6, 22, 46, 0.98);
-    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.14);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.97) 0%, rgba(239, 247, 255, 0.97) 100%);
+    border-bottom: 1px solid rgba(6, 39, 127, 0.1);
+    box-shadow: 0 0.75rem 2rem rgba(6, 39, 127, 0.08);
+    backdrop-filter: blur(10px);
+}
+
+.corporate-navbar .navbar-brand {
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.corporate-navbar .navbar-logo {
+    width: auto;
+    height: 56px;
+}
+
+.corporate-navbar .navbar-brand-text {
+    margin-left: 0.75rem;
+    color: var(--corporate-navy);
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
 }
 
 .corporate-navbar .nav-link {
-    color: rgba(255, 255, 255, 0.78);
+    color: #31425f;
     font-size: 0.95rem;
+    font-weight: 600;
+    padding-inline: 0.85rem;
+    border-radius: 999px;
+    transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 .corporate-navbar .nav-link:hover,
 .corporate-navbar .nav-link.active {
-    color: #fff;
+    color: var(--corporate-navy);
+    background: rgba(23, 105, 224, 0.08);
 }
 
+// ============================================================
+// Hero base — shared by all pages
+// ============================================================
 .hero-tech,
 .page-hero {
     position: relative;
     overflow: hidden;
     background:
-        radial-gradient(ellipse at 82% 18%, rgba(24, 183, 255, 0.32) 0%, transparent 36%),
-        radial-gradient(ellipse at 15% 75%, rgba(11, 94, 215, 0.28) 0%, transparent 36%),
-        radial-gradient(ellipse at 60% 90%, rgba(24, 183, 255, 0.1) 0%, transparent 30%),
-        linear-gradient(135deg, #06162e 0%, #0a2d62 58%, #06162e 100%);
-    color: #fff;
+        radial-gradient(ellipse at 82% 18%, rgba(33, 183, 255, 0.18) 0%, transparent 42%),
+        radial-gradient(ellipse at 12% 78%, rgba(23, 105, 224, 0.12) 0%, transparent 38%),
+        linear-gradient(135deg, #ffffff 0%, #eef7ff 54%, #f8fbff 100%);
+    color: #10213f;
 }
 
-// Subtle grid pattern
+// Subtle grid on all heroes
 .hero-tech::before,
 .page-hero::before {
     content: "";
     position: absolute;
     inset: 0;
     background-image:
-        linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-    background-size: 54px 54px;
-    mask-image: linear-gradient(135deg, rgba(0, 0, 0, 0.6), transparent 70%);
+        linear-gradient(rgba(6, 39, 127, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(6, 39, 127, 0.045) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: linear-gradient(135deg, rgba(0, 0, 0, 0.42), transparent 72%);
 }
 
-// Subtle diagonal light streaks
-.hero-tech::after,
+// Diagonal light streaks on all heroes
 .page-hero::after {
     content: "";
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(105deg, transparent 40%, rgba(24, 183, 255, 0.04) 42%, transparent 44%),
-        linear-gradient(105deg, transparent 52%, rgba(24, 183, 255, 0.03) 54%, transparent 56%),
-        linear-gradient(105deg, transparent 65%, rgba(11, 94, 215, 0.04) 67%, transparent 69%);
+        linear-gradient(108deg, transparent 38%, rgba(24, 183, 255, 0.04) 40%, transparent 42%),
+        linear-gradient(108deg, transparent 55%, rgba(24, 183, 255, 0.03) 57%, transparent 59%),
+        linear-gradient(108deg, transparent 70%, rgba(11, 94, 215, 0.04) 72%, transparent 74%);
     pointer-events: none;
 }
 
@@ -105,10 +145,133 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     z-index: 1;
 }
 
+.hero-tech::after,
+.page-hero-about::after,
+.page-hero-products::after,
+.page-hero-tech::after,
+.page-hero-careers::after,
+.page-hero-contact::after {
+    opacity: 0.72;
+}
+
+// ============================================================
+// 首页 — 科技芯片核心：同心光环 + 环绕粒子
+// ============================================================
+.hero-tech::after {
+    content: "";
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45%;
+    height: 85%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 400'%3E%3Cdefs%3E%3CradialGradient id='core' cx='50%25' cy='50%25' r='50%25'%3E%3Cstop offset='0%25' stop-color='%2318b7ff' stop-opacity='0.25'/%3E%3Cstop offset='100%25' stop-color='transparent'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='250' cy='200' r='140' fill='url(%23core)'/%3E%3Cg fill='none' stroke='%2318b7ff' stroke-width='0.6' opacity='0.25'%3E%3Ccircle cx='250' cy='200' r='70'/%3E%3Ccircle cx='250' cy='200' r='100'/%3E%3Ccircle cx='250' cy='200' r='130'/%3E%3Ccircle cx='250' cy='200' r='155'/%3E%3C/g%3E%3Cg fill='%2318b7ff' opacity='0.3'%3E%3Ccircle cx='180' cy='160' r='2.5'/%3E%3Ccircle cx='320' cy='145' r='2'/%3E%3Ccircle cx='340' cy='240' r='2.5'/%3E%3Ccircle cx='170' cy='250' r='2'/%3E%3Ccircle cx='250' cy='100' r='2'/%3E%3Ccircle cx='250' cy='300' r='2'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: contain;
+    background-position: right center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+// ============================================================
+// 关于我们 — 企业结构：层叠菱形网格
+// ============================================================
+.page-hero-about::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 45%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 350'%3E%3Cg fill='none' stroke='%2318b7ff' stroke-width='0.8' opacity='0.2'%3E%3Cpath d='M200 30 L280 80 L200 130 L120 80 Z'/%3E%3Cpath d='M200 100 L310 165 L200 230 L90 165 Z'/%3E%3Cpath d='M200 180 L330 255 L200 330 L70 255 Z'/%3E%3C/g%3E%3Cg fill='%2318b7ff' opacity='0.18'%3E%3Ccircle cx='200' cy='80' r='3'/%3E%3Ccircle cx='280' cy='80' r='2'/%3E%3Ccircle cx='120' cy='80' r='2'/%3E%3Ccircle cx='200' cy='165' r='3'/%3E%3Ccircle cx='310' cy='165' r='2'/%3E%3Ccircle cx='90' cy='165' r='2'/%3E%3Ccircle cx='200' cy='255' r='3'/%3E%3Ccircle cx='330' cy='255' r='2'/%3E%3Ccircle cx='70' cy='255' r='2'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: contain;
+    background-position: right center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+// ============================================================
+// 产品介绍 — 数据流层：横向条带 + 数据节点
+// ============================================================
+.page-hero-products::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 48%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 320'%3E%3Cg fill='none' stroke='%2318b7ff' stroke-width='0.7' opacity='0.22'%3E%3Crect x='60' y='40' width='300' height='18' rx='3'/%3E%3Crect x='60' y='78' width='280' height='18' rx='3'/%3E%3Crect x='60' y='116' width='320' height='18' rx='3'/%3E%3Crect x='60' y='154' width='260' height='18' rx='3'/%3E%3Crect x='60' y='192' width='300' height='18' rx='3'/%3E%3Crect x='60' y='230' width='290' height='18' rx='3'/%3E%3C/g%3E%3Cg fill='%2318b7ff' opacity='0.25'%3E%3Ccircle cx='40' cy='49' r='3'/%3E%3Ccircle cx='40' cy='87' r='3'/%3E%3Ccircle cx='40' cy='125' r='3'/%3E%3Ccircle cx='40' cy='163' r='3'/%3E%3Ccircle cx='40' cy='201' r='3'/%3E%3Ccircle cx='40' cy='239' r='3'/%3E%3Ccircle cx='380' cy='125' r='3'/%3E%3Ccircle cx='340' cy='49' r='2'/%3E%3Ccircle cx='300' cy='239' r='2'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: contain;
+    background-position: right center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+// ============================================================
+// 技术能力 — 六边形网络：科技网格
+// ============================================================
+.page-hero-tech::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 320'%3E%3Cg fill='none' stroke='%2318b7ff' stroke-width='0.6' opacity='0.2'%3E%3Cpath d='M140 30 L180 10 L220 30 L220 70 L180 90 L140 70 Z'/%3E%3Cpath d='M220 30 L260 10 L300 30 L300 70 L260 90 L220 70 Z'/%3E%3Cpath d='M140 90 L180 70 L220 90 L220 130 L180 150 L140 130 Z'/%3E%3Cpath d='M220 90 L260 70 L300 90 L300 130 L260 150 L220 130 Z'/%3E%3Cpath d='M140 150 L180 130 L220 150 L220 190 L180 210 L140 190 Z'/%3E%3Cpath d='M220 150 L260 130 L300 150 L300 190 L260 210 L220 190 Z'/%3E%3Cpath d='M60 90 L100 70 L140 90 L140 130 L100 150 L60 130 Z'/%3E%3Cpath d='M300 90 L340 70 L380 90 L380 130 L340 150 L300 130 Z'/%3E%3C/g%3E%3Cg fill='%2318b7ff' opacity='0.2'%3E%3Ccircle cx='180' cy='70' r='2.5'/%3E%3Ccircle cx='260' cy='70' r='2.5'/%3E%3Ccircle cx='180' cy='130' r='2.5'/%3E%3Ccircle cx='260' cy='130' r='2.5'/%3E%3Ccircle cx='180' cy='190' r='2.5'/%3E%3Ccircle cx='260' cy='190' r='2.5'/%3E%3Ccircle cx='100' cy='110' r='2'/%3E%3Ccircle cx='340' cy='110' r='2'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: contain;
+    background-position: right center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+// ============================================================
+// 加入我们 — 连接网络：互联节点
+// ============================================================
+.page-hero-careers::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 45%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 340'%3E%3Cg fill='none' stroke='%2318b7ff' stroke-width='0.6' opacity='0.2'%3E%3Cline x1='190' y1='170' x2='120' y2='100'/%3E%3Cline x1='190' y1='170' x2='280' y2='90'/%3E%3Cline x1='190' y1='170' x2='310' y2='200'/%3E%3Cline x1='190' y1='170' x2='250' y2='280'/%3E%3Cline x1='190' y1='170' x2='100' y2='240'/%3E%3Cline x1='190' y1='170' x2='50' y2='170'/%3E%3Cline x1='120' y1='100' x2='70' y2='50'/%3E%3Cline x1='280' y1='90' x2='330' y2='50'/%3E%3Cline x1='310' y1='200' x2='360' y2='200'/%3E%3Cline x1='250' y1='280' x2='280' y2='320'/%3E%3Cline x1='100' y1='240' x2='60' y2='290'/%3E%3C/g%3E%3Cg fill='%2318b7ff' opacity='0.25'%3E%3Ccircle cx='190' cy='170' r='5'/%3E%3Ccircle cx='120' cy='100' r='3.5'/%3E%3Ccircle cx='280' cy='90' r='3.5'/%3E%3Ccircle cx='310' cy='200' r='3.5'/%3E%3Ccircle cx='250' cy='280' r='3.5'/%3E%3Ccircle cx='100' cy='240' r='3.5'/%3E%3Ccircle cx='50' cy='170' r='3.5'/%3E%3Ccircle cx='70' cy='50' r='2.5'/%3E%3Ccircle cx='330' cy='50' r='2.5'/%3E%3Ccircle cx='360' cy='200' r='2.5'/%3E%3Ccircle cx='280' cy='320' r='2.5'/%3E%3Ccircle cx='60' cy='290' r='2.5'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: contain;
+    background-position: right center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+// ============================================================
+// 联系我们 — 信号波纹：同心弧线
+// ============================================================
+.page-hero-contact::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 45%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 340'%3E%3Cg fill='none' stroke='%2318b7ff' stroke-width='0.7' opacity='0.2'%3E%3Cpath d='M190 170 Q250 100 310 170'/%3E%3Cpath d='M190 170 Q260 80 340 170'/%3E%3Cpath d='M190 170 Q270 60 370 170'/%3E%3Cpath d='M190 170 Q250 240 310 170'/%3E%3Cpath d='M190 170 Q260 260 340 170'/%3E%3Cpath d='M190 170 Q270 280 370 170'/%3E%3C/g%3E%3Cg fill='%2318b7ff' opacity='0.25'%3E%3Ccircle cx='190' cy='170' r='6'/%3E%3Ccircle cx='310' cy='170' r='4'/%3E%3Ccircle cx='340' cy='170' r='4'/%3E%3Ccircle cx='370' cy='170' r='4'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: contain;
+    background-position: right center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
 .section-muted {
     background:
-        radial-gradient(ellipse at 50% 50%, rgba(24, 183, 255, 0.03), transparent 60%),
-        var(--corporate-light);
+        radial-gradient(ellipse at 50% 0%, rgba(33, 183, 255, 0.06), transparent 55%),
+        linear-gradient(180deg, #f8fbff 0%, #eef6ff 100%);
+}
+
+.cta-panel {
+    position: relative;
+    overflow: hidden;
+    color: #10213f;
+    background:
+        radial-gradient(circle at 90% 20%, rgba(33, 183, 255, 0.2), transparent 18rem),
+        linear-gradient(135deg, #ffffff 0%, #eaf6ff 100%);
+    border: 1px solid var(--border-soft);
+    box-shadow: 0 1.25rem 3rem rgba(6, 39, 127, 0.1);
 }
 
 .eyebrow {
@@ -120,26 +283,30 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 .tech-card {
-    border: 1px solid rgba(11, 94, 215, 0.12);
-    border-radius: 1rem;
+    border: 1px solid var(--border-soft);
+    border-radius: 1.25rem;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 0.75rem 2rem rgba(6, 39, 127, 0.06);
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .tech-card:hover {
     transform: translateY(-4px);
-    border-color: rgba(24, 183, 255, 0.38);
-    box-shadow: 0 1rem 2rem rgba(7, 27, 58, 0.12);
+    border-color: rgba(33, 183, 255, 0.36);
+    box-shadow: 0 1.25rem 2.75rem rgba(6, 39, 127, 0.12);
 }
 
 .gradient-panel {
     min-height: 10rem;
-    border-radius: 1rem;
+    border-radius: 1.25rem;
     position: relative;
     overflow: hidden;
     background:
-        radial-gradient(ellipse at 78% 20%, rgba(24, 183, 255, 0.45), transparent 30%),
-        radial-gradient(ellipse at 15% 85%, rgba(11, 94, 215, 0.25), transparent 25%),
-        linear-gradient(135deg, #071f44 0%, #0b5ed7 45%, #18b7ff 100%);
+        radial-gradient(ellipse at 78% 20%, rgba(33, 183, 255, 0.28), transparent 32%),
+        radial-gradient(ellipse at 15% 85%, rgba(23, 105, 224, 0.16), transparent 28%),
+        linear-gradient(135deg, #ffffff 0%, #e8f5ff 55%, #dff2ff 100%);
+    border: 1px solid var(--border-soft);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.75);
 }
 
 // Subtle diagonal highlight streak
@@ -147,20 +314,20 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(115deg, transparent 55%, rgba(255, 255, 255, 0.06) 58%, transparent 61%);
+    background: linear-gradient(115deg, transparent 55%, rgba(255, 255, 255, 0.5) 58%, transparent 63%);
     pointer-events: none;
 }
 
 .chip-visual {
     position: relative;
     min-height: 260px;
-    border: 1px solid rgba(255, 255, 255, 0.22);
+    border: 1px solid rgba(6, 39, 127, 0.14);
     border-radius: 1.5rem;
     background:
-        radial-gradient(circle at 20% 20%, rgba(24, 183, 255, 0.28), transparent 22%),
-        linear-gradient(145deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.04));
-    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.26);
-    backdrop-filter: blur(6px);
+        radial-gradient(circle at 20% 20%, rgba(33, 183, 255, 0.22), transparent 24%),
+        linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(232, 245, 255, 0.72));
+    box-shadow: 0 1.5rem 3.5rem rgba(6, 39, 127, 0.16);
+    backdrop-filter: blur(8px);
 }
 
 .chip-core {
@@ -171,9 +338,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     height: 150px;
     transform: translate(-50%, -50%);
     border-radius: 1.25rem;
-    border: 2px solid rgba(24, 183, 255, 0.8);
-    background: rgba(6, 22, 46, 0.82);
-    box-shadow: 0 0 40px rgba(24, 183, 255, 0.3), inset 0 0 24px rgba(24, 183, 255, 0.18);
+    border: 2px solid rgba(23, 105, 224, 0.72);
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 0 40px rgba(33, 183, 255, 0.22), inset 0 0 24px rgba(33, 183, 255, 0.14);
     z-index: 1;
 }
 
@@ -182,13 +349,13 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     content: "";
     position: absolute;
     inset: 18px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(6, 39, 127, 0.14);
     border-radius: 0.75rem;
 }
 
 .chip-core::after {
     inset: 42px;
-    background: rgba(24, 183, 255, 0.18);
+    background: rgba(33, 183, 255, 0.14);
 }
 
 .chip-node {
@@ -199,9 +366,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     width: 56px;
     height: 56px;
     border-radius: 50%;
-    background: rgba(24, 183, 255, 0.18);
-    border: 1px solid rgba(24, 183, 255, 0.58);
-    color: #fff;
+    background: rgba(255, 255, 255, 0.86);
+    border: 1px solid rgba(23, 105, 224, 0.35);
+    color: var(--corporate-navy);
     font-size: 0.78rem;
     font-weight: 700;
 }
@@ -212,10 +379,13 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .chip-node.node-4 { bottom: 16%; right: 14%; }
 
 .stat-card {
-    border-left: 3px solid var(--corporate-cyan);
+    border-top: 3px solid var(--corporate-cyan);
     background: #fff;
-    border-radius: 0.75rem;
-    box-shadow: 0 0.75rem 1.5rem rgba(7, 27, 58, 0.08);
+    border-radius: 1rem;
+    border-right: 1px solid var(--border-soft);
+    border-bottom: 1px solid var(--border-soft);
+    border-left: 1px solid var(--border-soft);
+    box-shadow: 0 0.75rem 1.75rem rgba(6, 39, 127, 0.07);
 }
 
 .timeline {
@@ -243,20 +413,22 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 .corporate-footer {
     background:
-        radial-gradient(circle at 20% 80%, rgba(24, 183, 255, 0.06), transparent 35%),
-        radial-gradient(circle at 80% 20%, rgba(11, 94, 215, 0.08), transparent 30%),
-        linear-gradient(180deg, #071f44 0%, #06162e 100%);
+        radial-gradient(circle at 20% 80%, rgba(33, 183, 255, 0.08), transparent 35%),
+        linear-gradient(180deg, #08265a 0%, #061a3a 100%);
+    border-top: 1px solid rgba(33, 183, 255, 0.16);
 }
 
 .footer-links a {
     display: inline-block;
-    color: rgba(255, 255, 255, 0.62);
+    color: rgba(255, 255, 255, 0.68);
     margin-bottom: 0.5rem;
     text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .footer-links a:hover {
     color: #fff;
+    transform: translateX(2px);
 }
 
 .news-visual {
