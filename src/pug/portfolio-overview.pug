@@ -5,13 +5,14 @@ html(lang='zh-CN')
 
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-        meta(name='description', content='亚格之芯产品介绍：Yucca DPU 与 Yucca SuperNIC，面向数据中心、智算中心和以太网 AI 训练网络。')
-        meta(name='author', content='上海亚格之芯科技有限公司')
+        meta(name='description', content='亚格之芯 CMU 产品介绍：面向 AI 推理加速、训练加速与 AI 云化的一体化 SoC 芯片。')
+        meta(name='author', content='上海亚格之芯技术有限公司')
 
-        title 产品介绍 - 上海亚格之芯科技有限公司
+        title 产品介绍 - 上海亚格之芯技术有限公司
 
         // Favicon
         link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
+        link(rel='preload', as='image', href='assets/yucca_dpu_img.png', fetchpriority='high')
 
         include includes/css.pug
 
@@ -28,80 +29,95 @@ html(lang='zh-CN')
                     .row.justify-content-center
                         .col-lg-9.text-center
                             h1.display-6.fw-bolder.mb-3 产品介绍
-                            p.lead.text-muted.mb-0 Yucca DPU 与 Yucca SuperNIC 面向数据中心和智算中心，提升算力利用率、网络传输效率与系统可扩展能力。
+                            p.lead.text-muted.mb-0 CMU（Compute & Memory Unit）集网络、存储、传输与加速于一体，面向 AI 推理加速、训练加速与 AI 云化三大场景。
 
-            // Yucca DPU
+            // CMU
             section.py-4
                 .container.px-5.my-4
                     .row.gx-5.align-items-center.mb-5
                         .col-lg-5.mb-4.mb-lg-0
-                            .gradient-panel.h-100
+                            figure.product-showcase.mb-0
+                                img.product-showcase-image(src='assets/yucca_dpu_img.png', alt='第一代 CMU 产品实物图', width='890', height='533', decoding='sync', fetchpriority='high')
                         .col-lg-7
-                            .badge.bg-primary.bg-gradient.rounded-pill.mb-3 Yucca DPU
-                            h2.fw-bolder.mb-4 智算中心算力运营变革的关键
-                            p.lead.text-muted Yucca DPU 是智算中心算力运营变革的关键，拥有强大弹性裸金属能力。可精细隔离物理 AI 服务器的网络、存储资源，实现多用户间高效流转，如同智算中心的“智能中枢”。
-                            p.text-muted.mb-0 它能够提升算力利用率，降低运营成本，支撑大规模智算中心高效运作。
+                            .badge.bg-primary.bg-gradient.rounded-pill.mb-3 第一代 · CMU
+                            h2.fw-bolder.mb-4 面向 AI 推理的数据通路加速芯片
+                            p.lead.text-muted CMU 采用硬件直通架构，由芯片直接读取 SSD 数据，并通过 RDMA 跨网络传输至目标 GPU 服务器，减少 CPU 与软件层参与。
+                            p.text-muted.mb-0 对端 CMU 可将数据直接写入 GPU HBM 指定位置，并与 vLLM、SGLang、LMCache 等推理框架协同，优化 KV Cache 跨节点加载链路。
                     .row.gx-4.row-cols-1.row-cols-md-2
                         .col.mb-4
                             .card.tech-card.h-100.border-0.shadow-sm
                                 .card-body.p-4
-                                    h3.h5.fw-bold 智能算力调配
-                                    p.text-muted.mb-0 精细隔离物理 AI 服务器的网络、存储资源，实现多用户间高效流转。
+                                    h3.h5.fw-bold 硬件直通架构
+                                    p.text-muted.mb-0 SSD 数据由 CMU 直接读取，绕过 CPU 和软件层，缩短数据访问路径。
                         .col.mb-4
                             .card.tech-card.h-100.border-0.shadow-sm
                                 .card-body.p-4
-                                    h3.h5.fw-bold 网络存储优化
-                                    p.text-muted.mb-0 网络上全面支持 SRIOV、OVS Offload 等技术，构建高速稳定数据传输通道；存储方面支持 Ceph、iSCSI 等，满足不同场景数据存储需求。
+                                    h3.h5.fw-bold RDMA 高速传输
+                                    p.text-muted.mb-0 通过 RDMA 将数据跨网络直接传输到目标 GPU 服务器上的对端 CMU。
                         .col.mb-4
                             .card.tech-card.h-100.border-0.shadow-sm
                                 .card-body.p-4
-                                    h3.h5.fw-bold 多元加速赋能
-                                    p.text-muted.mb-0 融合 GPU Direct RDMA、PCIe P2P 等 AI 加速技术及先进虚拟化加速技术，降低系统开销。
+                                    h3.h5.fw-bold GPU HBM 直写
+                                    p.text-muted.mb-0 对端 CMU 接收数据后直接写入 GPU HBM 指定位置，减少中间拷贝与 CPU 开销。
                         .col.mb-4
                             .card.tech-card.h-100.border-0.shadow-sm
                                 .card-body.p-4
-                                    h3.h5.fw-bold 高效管控适配
-                                    p.text-muted.mb-0 提供基于 libvirt 和基于 CNI 的管控适配，打造便捷高效管理平台，实现系统全面监控与精准控制。
+                                    h3.h5.fw-bold 推理引擎协同
+                                    p.text-muted.mb-0 通过内置插件与 vLLM、SGLang、LMCache 等推理框架交互。
 
-            // Yucca SuperNIC
+            // CMU high-performance network product
             section.py-4.section-muted
                 .container.px-5.my-4
                     .row.gx-5.align-items-center.mb-5
-                        .col-lg-7.order-2.order-lg-1
-                            .badge.bg-primary.bg-gradient.rounded-pill.mb-3 Yucca SuperNIC
-                            h2.fw-bolder.mb-4 AI 训练网络的高速引擎
-                            p.lead.text-muted Yucca SuperNIC 专为解决以太网 AI 训练大规模数据传输难题，支持 GPU Direct RDMA 等 AI 加速技术，搭配标准 RoCEv2、自研及开放 UEC 协议。
-                            p.text-muted.mb-0 它能够有效解决数据丢包、拥塞问题，提升传输效率与稳定性，保障 AI 训练网络。
-                        .col-lg-5.order-1.order-lg-2.mb-4.mb-lg-0
-                            .gradient-panel.h-100
-                    .row.gx-4.row-cols-1.row-cols-md-2
-                        .col.mb-4
+                        .col-lg-7
+                            .badge.bg-primary.bg-gradient.rounded-pill.mb-3 第二代 · CMU
+                            h2.fw-bolder.mb-4 开放以太网 AI 训练加速
+                            p.lead.text-muted CMU 面向 800G RDMA 高性能网络，解决以太网训练中的多路径传输、乱序处理、拥塞控制与丢包重传等问题。
+                            p.text-muted.mb-0 基于开放的 RoCEv2 以太网标准，为大规模 AI 训练提供高带宽、低延迟的数据传输能力。
+                        .col-lg-5
+                            figure.product-status-panel.product-image-panel.mb-0
+                                img.product-second-gen-image(src='assets/image400.png', alt='CMU400 第二代智能网卡实物图', width='1200', height='1200', loading='lazy', decoding='async')
+                    .row.gx-4.justify-content-center
+                        .col-12.col-md-6.col-xl-4.mb-4
                             .card.tech-card.h-100.border-0.shadow-sm
                                 .card-body.p-4
                                     h3.h5.fw-bold 超强网络传输
                                     p.text-muted.mb-0 支持 GPU Direct RDMA、标准 RoCEv2、自研及开放 UEC 协议，有效解决数据丢包与拥塞问题。
-                        .col.mb-4
+                        .col-12.col-md-6.col-xl-4.mb-4
                             .card.tech-card.h-100.border-0.shadow-sm
                                 .card-body.p-4
                                     h3.h5.fw-bold 高带宽低延迟
                                     p.text-muted.mb-0 总带宽高达 2x200Gbps 甚至更高，转发速率达 250Mpps，大幅降低延迟，支持 AI 训练实时数据交互。
-                        .col.mb-4
+                        .col-12.col-md-6.col-xl-4.mb-4
                             .card.tech-card.h-100.border-0.shadow-sm
                                 .card-body.p-4
                                     h3.h5.fw-bold 丰富功能集成
                                     p.text-muted.mb-0 集成 OVS 等网络加速功能与多种 RDMA 技术，后续版本将加入 Adaptive routing 等功能。
-                        .col.mb-4
+                        .col-12.col-md-6.col-xl-4.mb-4
                             .card.tech-card.h-100.border-0.shadow-sm
                                 .card-body.p-4
                                     h3.h5.fw-bold 灵活适配拓展
                                     p.text-muted.mb-0 拥有 PCIe Gen5x16 等 Host 接口与 Virtio Net 设备类型，可与各类 AI 服务器及网络环境适配。
+                        .col-12.col-md-6.col-xl-4.mb-4
+                            .card.tech-card.h-100.border-0.shadow-sm
+                                .card-body.p-4
+                                    h3.h5.fw-bold AI 推理加速
+                                    p.text-muted.mb-0 面向大模型与智能应用推理场景，优化 GPU 间高速数据传输与网络数据通路，降低推理延迟并提升并发处理效率。
+
+            // Third-generation product status
+            section.py-4
+                .container.px-5.my-4
+                    .card.tech-card.border-0.shadow-sm
+                        .card-body.p-4.p-lg-5.text-center
+                            .badge.bg-secondary.bg-gradient.rounded-pill.mb-3 第三代
+                            h2.h3.fw-bolder.mb-0 研发中
 
             // CTA
             section.py-4
                 .container.px-5.my-4
-                    h2.fw-bolder.mb-3 需要了解 Yucca DPU 或 Yucca SuperNIC？
+                    h2.fw-bolder.mb-3 需要了解 CMU？
                     p.text-muted.mb-4 欢迎联系亚格之芯，获取产品资料、方案沟通或合作信息。
-                    a.btn.btn-lg.btn-primary(href='contact.html') 联系我们
+                    a.btn.btn-lg.btn-primary(href='mailto:sales@yuccacloud.com?subject=CMU 产品咨询') 商务咨询
 
         // Footer
         include includes/footer.pug

@@ -5,10 +5,10 @@ html(lang='zh-CN')
 
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-        meta(name='description', content='上海亚格之芯科技有限公司专注数据中心和智算中心网络技术，核心产品包括 Yucca DPU 和 Yucca SuperNIC。')
-        meta(name='author', content='上海亚格之芯科技有限公司')
+        meta(name='description', content='上海亚格之芯技术有限公司专注 AI 推理加速芯片设计，核心产品 CMU 集网络、存储、传输与加速于一体。')
+        meta(name='author', content='上海亚格之芯技术有限公司')
 
-        title 上海亚格之芯科技有限公司 - Yucca DPU 与 Yucca SuperNIC
+        title 上海亚格之芯技术有限公司 - AI 推理加速芯片 CMU
 
         // Favicon
         link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
@@ -28,28 +28,16 @@ html(lang='zh-CN')
                     .row.gx-5.align-items-center.justify-content-between
                         .col-lg-7
                             .my-4
-                                h1.display-6.fw-bolder.mb-3 上海亚格之芯科技有限公司
-                                p.lead.fw-normal.text-muted.mb-4 在数字化浪潮与全球网络格局变革中，亚格之芯凭借创新精神和技术底蕴，屹立于网络科技前沿。作为行业领军企业，它汇聚全球顶尖人才组建研发团队。
-                                .d-grid.gap-3.d-sm-flex
-                                    a.btn.btn-primary.btn-lg.px-4.me-sm-3(href='about.html') 关于我们
-                                    a.btn.btn-outline-primary.btn-lg.px-4(href='portfolio-overview.html') 产品介绍
+                                h1.display-6.fw-bolder.mb-3 上海亚格之芯技术有限公司
+                                p.lead.fw-normal.text-muted.mb-4 亚格之芯成立于 2024 年底，总部位于上海，并在杭州设有芯片研发团队。自研 CMU 集网络、存储、传输与加速能力于一体，面向 AI 推理加速、训练加速与 AI 云化场景。
                         .col-lg-5.d-none.d-lg-block
                             .chip-visual.my-4
-                                .chip-node.node-1 2x200G
-                                .chip-node.node-2 250Mpps
+                                .chip-node.node-1 800G
+                                .chip-node.node-2 KV Cache
                                 .chip-core
+                                    span.chip-core-label CMU
                                 .chip-node.node-3 RDMA
-                                .chip-node.node-4 DPU
-
-            // About summary
-            section.py-4
-                .container.px-5.my-4
-                    .row.gx-5.align-items-center
-                        .col-lg-5.mb-4.mb-lg-0
-                            h2.fw-bolder.mb-3 以创新为核心，深耕数据中心与智算中心网络技术
-                        .col-lg-7
-                            p.lead.text-muted.mb-3 亚格之芯以创新为核心，在数据中心和智算中心研发成果显著，核心产品 DPU 和 SuperNIC 表现卓越。
-                            p.text-muted.mb-0 未来，亚格之芯将继续秉持创新理念，深耕网络技术领域，提升产品性能，拓展应用场景，为全球提供优质网络方案，携手推动网络科技产业发展，开启网络技术新篇章。
+                                .chip-node.node-4 AI 推理
 
             // Capabilities section
             section#features.py-4.section-muted
@@ -58,108 +46,33 @@ html(lang='zh-CN')
                         .col-lg-4
                             h2.fw-bolder.mb-3 核心能力
                         .col-lg-8
-                            p.lead.text-muted.mb-0 围绕智能算力调配、网络存储优化、多元加速赋能和高效管控适配，构建面向数据中心与智算中心的网络基础设施能力。
-                    .row.gx-4.row-cols-1.row-cols-md-2.row-cols-xl-4
-                        .col.mb-4
+                            p.lead.text-muted.mb-0 CMU 聚焦 AI 推理加速、AI 训练加速与 AI 云化三大核心能力，构建面向 AI 数据中心的芯片基础设施。
+                    .capability-grid
+                        .capability-item.capability-primary
                             .card.tech-card.h-100.border-0.shadow-sm
                                 .card-body.p-4
                                     .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-3
-                                        i.bi.bi-diagram-3
-                                    h3.h5.fw-bold 智能算力调配
-                                    p.text-muted.mb-0 Yucca DPU 拥有强大弹性裸金属能力，可精细隔离物理 AI 服务器的网络、存储资源。
-                        .col.mb-4
+                                        i.bi.bi-lightning-charge
+                                    h3.h4.fw-bold AI 推理加速
+                                    p.text-muted.mb-3 通过 SSD 硬件直通、RDMA 跨节点传输与 GPU HBM 直写，优化 KV Cache 加载链路，减少 CPU 参与和 GPU 重算开销。
+                                    p.text-muted.mb-4 支持与 vLLM、SGLang、LMCache 等推理框架协同。
+                        .capability-item.capability-secondary
                             .card.tech-card.h-100.border-0.shadow-sm
                                 .card-body.p-4
                                     .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-3
                                         i.bi.bi-hdd-network
-                                    h3.h5.fw-bold 网络存储优化
-                                    p.text-muted.mb-0 支持 SRIOV、OVS Offload、Ceph、iSCSI 等技术，构建高速稳定的数据传输与存储通道。
-                        .col.mb-4
+                                    h3.h4.fw-bold AI 训练加速
+                                    p.text-muted.mb-2 内置 800G RDMA 高性能网络能力，解决多路径传输、乱序处理、拥塞控制与丢包重传等问题。
+                                    p.text-muted.mb-0 基于开放以太网标准 RoCEv2，构建开放、高效的 AI 训练网络。
+                        .capability-item.capability-secondary
                             .card.tech-card.h-100.border-0.shadow-sm
                                 .card-body.p-4
                                     .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-3
-                                        i.bi.bi-cpu
-                                    h3.h5.fw-bold 多元加速赋能
-                                    p.text-muted.mb-0 融合 GPU Direct RDMA、PCIe P2P 等 AI 加速技术及先进虚拟化加速技术。
-                        .col.mb-4
-                            .card.tech-card.h-100.border-0.shadow-sm
-                                .card-body.p-4
-                                    .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-3
-                                        i.bi.bi-sliders
-                                    h3.h5.fw-bold 高效管控适配
-                                    p.text-muted.mb-0 提供基于 libvirt 和基于 CNI 的管控适配，实现系统全面监控与精准控制。
+                                        i.bi.bi-diagram-3
+                                    h3.h4.fw-bold AI 云化
+                                    p.text-muted.mb-2 实现裸金属物理机的自动化部署、运维、安全隔离与资源调度，帮助物理算力对接云平台。
+                                    p.text-muted.mb-0 将传统 1–2 天的人工部署与隔离流程缩短至 5–7 分钟。
 
-            // Products section
-            section.py-4
-                .container.px-5.my-4
-                    .text-center.mb-5
-                        h2.fw-bolder 产品介绍
-                        p.lead.text-muted.mb-0 核心产品 Yucca DPU 与 Yucca SuperNIC 面向数据中心、智算中心和以太网 AI 训练网络。
-                    .row.gx-5
-                        .col-lg-6.mb-4
-                            .card.tech-card.h-100.shadow-sm.border-0
-                                .gradient-panel.rounded-bottom-0
-                                .card-body.p-4.p-lg-5
-                                    .badge.bg-primary.bg-gradient.rounded-pill.mb-3 Yucca DPU
-                                    h3.h4.fw-bold 智算中心算力运营变革的关键
-                                    p.text-muted Yucca DPU 拥有强大弹性裸金属能力，可精细隔离物理 AI 服务器的网络、存储资源，实现多用户间高效流转，如同智算中心的“智能中枢”。
-                                    ul.text-muted.mb-4
-                                        li 支持 SRIOV、OVS Offload 等网络加速技术
-                                        li 支持 Ceph、iSCSI 等存储场景
-                                        li 融合 GPU Direct RDMA、PCIe P2P 与虚拟化加速
-                                        li 提供 libvirt 和 CNI 管控适配
-                                    a.text-decoration-none.fw-bold(href='portfolio-overview.html') 查看 Yucca DPU
-                                        i.bi.bi-arrow-right.ms-1
-                        .col-lg-6.mb-4
-                            .card.tech-card.h-100.shadow-sm.border-0
-                                .gradient-panel.rounded-bottom-0
-                                .card-body.p-4.p-lg-5
-                                    .badge.bg-primary.bg-gradient.rounded-pill.mb-3 Yucca SuperNIC
-                                    h3.h4.fw-bold AI 训练网络的高速引擎
-                                    p.text-muted Yucca SuperNIC 专为解决以太网 AI 训练大规模数据传输难题，支持 GPU Direct RDMA、标准 RoCEv2、自研及开放 UEC 协议。
-                                    ul.text-muted.mb-4
-                                        li 总带宽高达 2x200Gbps 甚至更高
-                                        li 转发速率达 250Mpps
-                                        li 集成 OVS 网络加速与多种 RDMA 技术
-                                        li 支持 PCIe Gen5x16 Host 接口与 Virtio Net 设备类型
-                                    a.text-decoration-none.fw-bold(href='portfolio-overview.html') 查看 Yucca SuperNIC
-                                        i.bi.bi-arrow-right.ms-1
-
-            // Scenario section
-            section.py-4.section-muted
-                .container.px-5.my-4
-                    .row.gx-5.align-items-center
-                        .col-lg-5.mb-4.mb-lg-0
-                            h2.fw-bolder.mb-3 面向智算中心与 AI 训练网络
-                            p.text-muted.mb-0 亚格之芯通过 DPU 和 SuperNIC 产品，提升算力利用率，降低运营成本，支撑大规模智算中心高效运作。
-                        .col-lg-7
-                            .row.g-3
-                                .col-sm-6
-                                    .stat-card.p-4
-                                        h3.h5.fw-bold 弹性裸金属
-                                        p.text-muted.mb-0 精细隔离物理 AI 服务器的网络、存储资源。
-                                .col-sm-6
-                                    .stat-card.p-4
-                                        h3.h5.fw-bold AI 训练网络
-                                        p.text-muted.mb-0 解决大规模数据传输、丢包和拥塞问题。
-                                .col-sm-6
-                                    .stat-card.p-4
-                                        h3.h5.fw-bold 网络与存储卸载
-                                        p.text-muted.mb-0 通过 OVS Offload、Ceph、iSCSI 等能力提升效率。
-                                .col-sm-6
-                                    .stat-card.p-4
-                                        h3.h5.fw-bold 灵活适配拓展
-                                        p.text-muted.mb-0 适配各类 AI 服务器及网络环境，便于系统集成与升级。
-
-            // CTA section
-            section.py-4
-                .container.px-5.my-4
-                    .rounded-4.p-4.p-sm-5.cta-panel
-                        .d-flex.align-items-center.justify-content-between.flex-column.flex-xl-row.text-center.text-xl-start
-                            .mb-4.mb-xl-0
-                                .fs-3.fw-bold 携手推动网络科技产业发展
-                                .text-muted 了解 Yucca DPU、Yucca SuperNIC 或商务合作，请与亚格之芯联系。
-                            a.btn.btn-primary.btn-lg.px-4(href='contact.html') 联系我们
 
         // Footer
         include includes/footer.pug
