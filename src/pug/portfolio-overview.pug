@@ -24,12 +24,58 @@ html(lang='zh-CN')
             include includes/navbar.pug
 
             // Page Header
-            header.page-hero.page-hero-products.py-4
+            header.product-page-hero
                 .container.px-5
-                    .row.justify-content-center
-                        .col-lg-9.text-center
-                            h1.display-6.fw-bolder.mb-3 产品介绍
-                            p.lead.text-muted.mb-0 CMU（Compute & Memory Unit）集网络、存储、传输与加速于一体，面向 AI 推理加速、训练加速与 AI 云化三大场景。
+                    .row.gx-5.align-items-center
+                        .col-lg-7
+                            .product-page-kicker
+                                span.hero-kicker-dot
+                                | PRODUCT PORTFOLIO · AI INFRASTRUCTURE
+                            h1 从数据通路到集群通信，<br/>为 AI 算力而设计。
+                            p.product-page-lead 亚格之芯围绕 AI 云、模型训练与推理集群，构建 CMU DPU 与 CMU SuperNIC 两类产品，让资源管理与高速通信共同服务真实的 AI 工作负载。
+                            .product-page-actions
+                                a.btn.btn-hero-primary(href='#generation-two') 查看产品系列
+                                    i.bi.bi-arrow-down
+                                a.btn.btn-hero-secondary(href='mailto:sales@yuccacloud.com?subject=CMU 产品咨询') 获取产品资料
+                        .col-lg-5.d-none.d-lg-block
+                            .product-hero-system
+                                .product-system-label.label-top AI CLOUD
+                                .product-system-label.label-left GPU CLUSTER
+                                .product-system-label.label-right STORAGE
+                                .product-system-core
+                                    span YUCCA
+                                    strong CMU
+                                    em DATA PATH
+                                .product-system-orbit.orbit-a
+                                .product-system-orbit.orbit-b
+                                .product-system-caption
+                                    span NETWORK · STORAGE · ACCELERATION
+                                    b INFRASTRUCTURE ON CHIP
+
+            // Product architecture overview
+            section.product-overview-band.py-5
+                .container.px-5
+                    .section-heading
+                        div
+                            p.section-label PRODUCT STRATEGY
+                            h2 两条产品线，构成 AI 基础设施的关键层。
+                        p CMU DPU 管理算力资源与数据供给；CMU SuperNIC 处理集群高速通信。它们分别对应 AI 云和训练、推理集群的核心需求。
+                    .product-overview-grid
+                        .product-overview-item
+                            i.bi.bi-layers-half
+                            div
+                                strong CMU DPU
+                                span 网络与存储卸载 · 弹性裸金属 · 资源管理
+                        .product-overview-item
+                            i.bi.bi-broadcast-pin
+                            div
+                                strong CMU SuperNIC
+                                span RDMA 通信 · 高速互联 · 集群数据面加速
+                        .product-overview-item
+                            i.bi.bi-diagram-3
+                            div
+                                strong 面向 AI 工作负载
+                                span 推理数据访问 · 训练通信 · 云端资源调度
 
             // CMU
             section.py-4
@@ -65,52 +111,90 @@ html(lang='zh-CN')
                                     h3.h5.fw-bold 推理引擎协同
                                     p.text-muted.mb-0 通过内置插件与 vLLM、SGLang、LMCache 等推理框架交互。
 
-            // CMU high-performance network product
-            section.py-4.section-muted
+            // Second generation product family
+            section#generation-two.py-5.section-muted
                 .container.px-5.my-4
-                    .row.gx-5.align-items-center.mb-5
-                        .col-lg-7
-                            .badge.bg-primary.bg-gradient.rounded-pill.mb-3 第二代 · CMU
-                            h2.fw-bolder.mb-4 开放以太网 AI 训练加速
-                            p.lead.text-muted CMU 面向 400G RDMA 高性能网络，解决以太网训练中的多路径传输、乱序处理、拥塞控制与丢包重传等问题。
-                            p.text-muted.mb-0 基于开放的 RoCEv2 以太网标准，为大规模 AI 训练提供高带宽、低延迟的数据传输能力。
-                        .col-lg-5
-                            figure.product-status-panel.product-image-panel.mb-0
-                                img.product-second-gen-image(src='assets/image400.png', alt='CMU400 第二代智能网卡实物图', width='1200', height='1200', loading='lazy', decoding='async')
-                    .row.gx-4.justify-content-center
-                        .col-12.col-md-6.col-xl-4.mb-4
-                            .card.tech-card.h-100.border-0.shadow-sm
-                                .card-body.p-4
-                                    h3.h5.fw-bold 超强网络传输
-                                    p.text-muted.mb-0 支持 GPU Direct RDMA、标准 RoCEv2、自研及开放 UEC 协议，有效解决数据丢包与拥塞问题。
-                        .col-12.col-md-6.col-xl-4.mb-4
-                            .card.tech-card.h-100.border-0.shadow-sm
-                                .card-body.p-4
-                                    h3.h5.fw-bold 高带宽低延迟
-                                    p.text-muted.mb-0 总带宽高达 2x200Gbps 甚至更高，转发速率达 250Mpps，大幅降低延迟，支持 AI 训练实时数据交互。
-                        .col-12.col-md-6.col-xl-4.mb-4
-                            .card.tech-card.h-100.border-0.shadow-sm
-                                .card-body.p-4
-                                    h3.h5.fw-bold 丰富功能集成
-                                    p.text-muted.mb-0 集成 OVS 等网络加速功能与多种 RDMA 技术，后续版本将加入 Adaptive routing 等功能。
-                        .col-12.col-md-6.col-xl-4.mb-4
-                            .card.tech-card.h-100.border-0.shadow-sm
-                                .card-body.p-4
-                                    h3.h5.fw-bold 灵活适配拓展
-                                    p.text-muted.mb-0 拥有 PCIe Gen5x16 等 Host 接口与 Virtio Net 设备类型，可与各类 AI 服务器及网络环境适配。
-                        .col-12.col-md-6.col-xl-4.mb-4
-                            .card.tech-card.h-100.border-0.shadow-sm
-                                .card-body.p-4
-                                    h3.h5.fw-bold AI 推理加速
-                                    p.text-muted.mb-0 面向大模型与智能应用推理场景，优化 GPU 间高速数据传输与网络数据通路，降低推理延迟并提升并发处理效率。
+                    .product-generation-heading
+                        div
+                            .badge.bg-primary.bg-gradient.rounded-pill.mb-3 第二代 · 400G 产品系列
+                            h2.fw-bolder.mb-2 两张卡，分别服务通信与算力管理
+                        p.text-muted.mb-0 CMU SuperNIC 面向 AI 集群高速通信；CMU DPU 面向 AI 云和弹性裸金属的网络、存储与资源管理。
+                    .product-generation-grid
+                        article.generation-product-card
+                            .generation-product-image
+                                img(src='assets/image400.png', alt='CMU SuperNIC 400G 产品示意图', width='1200', height='1200', loading='lazy', decoding='async')
+                                span.generation-bandwidth 400G
+                            .generation-product-content
+                                span.generation-eyebrow CMU SUPERNIC
+                                h3 AI 高速通信卡
+                                p 面向大模型训练与推理集群，将通信数据面处理下沉到网卡侧，支持高带宽节点间互联。
+                                ul.generation-feature-list
+                                    li
+                                        i.bi.bi-check2
+                                        | 2 × 200G 聚合 400G 网络接口
+                                    li
+                                        i.bi.bi-check2
+                                        | RoCEv2 / RDMA 协议与数据面卸载
+                                    li
+                                        i.bi.bi-check2
+                                        | 多路径、乱序处理与拥塞控制
+                                .generation-scenario
+                                    span 核心场景
+                                    strong 分布式训练 · 推理集群通信
+                        article.generation-product-card
+                            .generation-product-image
+                                img(src='assets/cmu_dpu_double_width.png', alt='CMU DPU 400G 双宽板卡产品示意图', width='1536', height='1024', loading='lazy', decoding='async')
+                                span.generation-bandwidth 400G
+                            .generation-product-content
+                                span.generation-eyebrow CMU DPU
+                                h3 AI 算力管理卡
+                                p 面向 AI 云与弹性裸金属，将网络、存储与管理能力从主机侧卸载，帮助 GPU 资源接入云平台。
+                                ul.generation-feature-list
+                                    li
+                                        i.bi.bi-check2
+                                        | 软硬件协同架构
+                                    li
+                                        i.bi.bi-check2
+                                        | virtio / OVS 网络与存储 I/O 卸载
+                                    li
+                                        i.bi.bi-check2
+                                        | 裸金属生命周期与带外运维能力
+                                .generation-scenario
+                                    span 核心场景
+                                    strong AI 云 · 弹性裸金属 · 资源纳管
 
-            // Third-generation product status
+            // Third generation product family
             section.py-4
                 .container.px-5.my-4
-                    .card.tech-card.border-0.shadow-sm
-                        .card-body.p-4.p-lg-5.text-center
-                            .badge.bg-secondary.bg-gradient.rounded-pill.mb-3 第三代
-                            h2.h3.fw-bolder.mb-0 研发中
+                    .product-generation-heading
+                        div
+                            .badge.bg-secondary.bg-gradient.rounded-pill.mb-3 第三代 · 800G 产品系列
+                            h2.fw-bolder.mb-2 面向更高带宽的下一代演进
+                        p.text-muted.mb-0 第三代产品规划延续 SuperNIC 与 DPU 双产品形态，面向 800G AI 基础设施的通信与算力管理需求。
+                    .product-generation-grid.product-generation-grid-future
+                        article.generation-product-card.generation-product-card-future
+                            .future-product-visual
+                                i.bi.bi-diagram-3
+                                span 800G
+                            .generation-product-content
+                                span.generation-eyebrow CMU SUPERNIC
+                                h3 AI 超级网卡 · 800G
+                                p 面向下一代训练与推理集群的高速互联产品，持续演进网络通信与数据面加速能力。
+                                .generation-scenario
+                                    span 产品状态
+                                    strong 研发中
+                        article.generation-product-card.generation-product-card-future
+                            .future-product-visual
+                                i.bi.bi-cpu
+                                span 800G
+                            .generation-product-content
+                                span.generation-eyebrow CMU DPU
+                                h3 AI 算力管理卡 · 800G
+                                p 面向下一代 AI 云与弹性裸金属基础设施，持续演进网络、存储与资源管理能力。
+                                .generation-scenario
+                                    span 产品状态
+                                    strong 研发中
+                    p.product-generation-disclaimer 第三代产品的规格、能力及交付节奏以实际研发验证和正式发布为准。
 
             // CTA
             section.py-4

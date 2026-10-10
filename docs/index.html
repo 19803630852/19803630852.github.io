@@ -33,64 +33,234 @@
                 </div>
             </nav>
             <!-- Header-->
-            <header class="hero-tech py-4">
+            <header class="home-hero">
+                <div class="home-hero-grid"></div>
                 <div class="container px-5">
-                    <div class="row gx-5 align-items-center justify-content-between">
+                    <div class="row gx-lg-5 align-items-center">
                         <div class="col-lg-7">
-                            <div class="my-4">
-                                <h1 class="display-6 fw-bolder mb-3">上海亚格之芯技术有限公司</h1>
-                                <p class="lead fw-normal text-muted mb-4">亚格之芯成立于 2024 年底，总部位于上海，并在杭州设有芯片研发团队。公司自研 CMU，集网络、存储、传输与加速能力于一体，聚焦 AI 推理加速、AI 训练加速与 AI 云化三大核心场景，构建面向 AI 数据中心的芯片基础设施。</p>
+                            <div class="home-hero-copy">
+                                <div class="hero-kicker">
+                                    <span class="hero-kicker-dot"></span>
+                                    AI INFRASTRUCTURE · FROM CHIP TO CLUSTER
+                                </div>
+                                <h1>
+                                    面向大模型时代的
+                                    <br />
+                                    AI 基础设施芯片。
+                                </h1>
+                                <p class="home-hero-lead">亚格之芯成立于 2024 年，团队位于上海与杭州。我们专注于 CMU 与 SuperNIC 产品研发，以软硬件协同能力服务 AI 云、模型训练与推理集群。</p>
+                                <div class="hero-actions">
+                                    <a class="btn btn-hero-primary" href="#products">
+                                        了解产品定位
+                                        <i class="bi bi-arrow-up-right"></i>
+                                    </a>
+                                    <a class="btn btn-hero-secondary" href="mailto:sales@yuccacloud.com?subject=商务合作咨询">商务合作</a>
+                                </div>
+                                <div class="hero-proof">
+                                    <div class="proof-item">
+                                        <strong>CMU + SuperNIC</strong>
+                                        <span>两条 AI 基础设施产品线</span>
+                                    </div>
+                                    <div class="proof-divider"></div>
+                                    <div class="proof-item">
+                                        <strong>上海 + 杭州</strong>
+                                        <span>架构、芯片与软硬协同</span>
+                                    </div>
+                                    <div class="proof-divider"></div>
+                                    <div class="proof-item">
+                                        <strong>AI 云 · 训推集群</strong>
+                                        <span>面向 AI 基础设施场景</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-lg-5 d-none d-lg-block">
-                            <div class="chip-visual my-4">
-                                <div class="chip-node node-1">400G</div>
-                                <div class="chip-node node-2">KV Cache</div>
-                                <div class="chip-core"><span class="chip-core-label">CMU</span></div>
-                                <div class="chip-node node-3">RDMA</div>
-                                <div class="chip-node node-4">AI 推理</div>
+                            <div class="hero-chip-stage">
+                                <div class="stage-corner corner-tl"></div>
+                                <div class="stage-corner corner-br"></div>
+                                <div class="stage-orbit orbit-one"></div>
+                                <div class="stage-orbit orbit-two"></div>
+                                <div class="stage-line line-one"></div>
+                                <div class="stage-line line-two"></div>
+                                <div class="stage-node stage-node-top">NETWORK</div>
+                                <div class="stage-node stage-node-right">MEMORY</div>
+                                <div class="stage-node stage-node-bottom">ACCELERATION</div>
+                                <div class="stage-cmu">
+                                    <span class="stage-cmu-mark">YUCCA</span>
+                                    <strong>CMU</strong>
+                                    <span class="stage-cmu-sub">COMPUTE · MEMORY · UNIT</span>
+                                </div>
+                                <div class="stage-caption">
+                                    <span>SYSTEM ON CHIP</span>
+                                    <b>AI DATA PATH</b>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </header>
-            <!-- Capabilities section-->
-            <section class="py-4 section-muted" id="features">
-                <div class="container px-5 my-4">
-                    <div class="row gx-5 mb-4">
-                        <div class="col-lg-8"><h2 class="fw-bolder mb-3">面向市场的核心竞争力</h2></div>
+            <!-- 01 Company-->
+            <section class="company-overview py-5">
+                <div class="container px-5">
+                    <div class="section-heading">
+                        <div>
+                            <p class="section-label">01 / COMPANY</p>
+                            <h2>为 AI 算力基础设施而来。</h2>
+                        </div>
+                        <p>亚格之芯聚焦 AI 基础设施芯片，围绕 AI 云的资源管理、推理的数据访问，以及训练与推理集群的高速通信，构建从芯片到软件栈的协同能力。</p>
                     </div>
-                    <div class="capability-grid">
-                        <div class="capability-item capability-primary">
-                            <div class="card tech-card h-100 border-0 shadow-sm">
-                                <div class="card-body p-4">
-                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-lightning-charge"></i></div>
-                                    <h3 class="h4 fw-bold">AI 推理加速</h3>
-                                    <p class="text-muted mb-3">通过 SSD 硬件直通、RDMA 跨节点传输与 GPU HBM 直写，优化 KV Cache 加载链路，减少 CPU 参与和 GPU 重算开销。</p>
-                                    <p class="text-muted mb-4">支持与 vLLM、SGLang、LMCache 等推理框架协同。</p>
-                                </div>
-                            </div>
+                    <div class="company-pillars">
+                        <article class="company-pillar">
+                            <span>01</span>
+                            <h3>专注 AI 基础设施</h3>
+                            <p>从 GPU 服务器的资源纳管，到训练、推理数据在集群内流动，围绕真实 AI 工作负载设计产品能力。</p>
+                        </article>
+                        <article class="company-pillar">
+                            <span>02</span>
+                            <h3>软硬件协同</h3>
+                            <p>将芯片硬件加速、网络与存储卸载、云平台与系统软件能力结合，缩短 AI 基础设施的关键数据路径。</p>
+                        </article>
+                        <article class="company-pillar">
+                            <span>03</span>
+                            <h3>面向开放生态</h3>
+                            <p>基于标准以太网与开放协议构建产品，与 AI 云、服务器、存储和推理框架共同演进。</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <!-- 02 Industry trends-->
+            <section class="ai-trends py-5" id="trends">
+                <div class="container px-5">
+                    <div class="section-heading section-heading-light">
+                        <div>
+                            <p class="section-label">02 / AI INFRASTRUCTURE TRENDS</p>
+                            <h2>
+                                大模型正在重塑
+                                <br />
+                                算力基础设施。
+                            </h2>
                         </div>
-                        <div class="capability-item capability-secondary">
-                            <div class="card tech-card h-100 border-0 shadow-sm">
-                                <div class="card-body p-4">
-                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-hdd-network"></i></div>
-                                    <h3 class="h4 fw-bold">AI 训练加速</h3>
-                                    <p class="text-muted mb-2">内置 400G RDMA 高性能网络能力，解决多路径传输、乱序处理、拥塞控制与丢包重传等问题。</p>
-                                    <p class="text-muted mb-0">基于开放以太网标准 RoCEv2，构建开放、高效的 AI 训练网络。</p>
-                                </div>
-                            </div>
+                        <p>AI 工作负载不再只是单机计算问题。推理、训练与算力云的发展，让数据供给、集群通信与资源调度成为影响整体效率的关键环节。</p>
+                    </div>
+                    <div class="trend-visual" role="img" aria-label="AI 数据中心内的服务器集群与高速数据互联示意">
+                        <div class="trend-visual-caption">
+                            <span>AI INFRASTRUCTURE</span>
+                            <strong>COMPUTE · NETWORK · ORCHESTRATION</strong>
                         </div>
-                        <div class="capability-item capability-secondary">
-                            <div class="card tech-card h-100 border-0 shadow-sm">
-                                <div class="card-body p-4">
-                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-diagram-3"></i></div>
-                                    <h3 class="h4 fw-bold">AI 云化</h3>
-                                    <p class="text-muted mb-2">实现裸金属物理机的自动化部署、运维、安全隔离与资源调度，帮助物理算力对接云平台。</p>
-                                    <p class="text-muted mb-0">将传统 1–2 天的人工部署与隔离流程缩短至 5–7 分钟。</p>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="trend-grid">
+                        <article class="trend-card">
+                            <div class="trend-number">01</div>
+                            <div class="trend-icon"><i class="bi bi-lightning-charge-fill"></i></div>
+                            <h3>推理加速</h3>
+                            <p>大模型推理需要频繁加载与交换 KV Cache。如何缩短存储、网络与 GPU 之间的数据路径，成为降低推理等待的重要方向。</p>
+                            <span>KV Cache · 存储 I/O · GPU 数据路径</span>
+                        </article>
+                        <article class="trend-card">
+                            <div class="trend-number">02</div>
+                            <div class="trend-icon"><i class="bi bi-diagram-3-fill"></i></div>
+                            <h3>集群通信</h3>
+                            <p>分布式训练与推理依赖高带宽、低延迟的节点间通信。多路径传输、乱序处理与拥塞控制正在成为以太网 AI 集群的重要能力。</p>
+                            <span>RoCEv2 · RDMA · 400G 以太网</span>
+                        </article>
+                        <article class="trend-card">
+                            <div class="trend-number">03</div>
+                            <div class="trend-icon"><i class="bi bi-grid-1x2-fill"></i></div>
+                            <h3>弹性调度</h3>
+                            <p>AI 云需要让 GPU 裸金属像云资源一样被交付、回收和运维，同时实现网络隔离、镜像切换与资源编排。</p>
+                            <span>裸金属 · 网络隔离 · 生命周期管理</span>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <!-- 03 Product positioning-->
+            <section class="product-positioning py-5" id="products">
+                <div class="container px-5">
+                    <div class="section-heading">
+                        <div>
+                            <p class="section-label">03 / PRODUCT POSITIONING</p>
+                            <h2>两类产品，回应两类核心需求。</h2>
                         </div>
+                        <p>SuperNIC 聚焦 AI 集群通信，CMU DPU 聚焦 AI 云与算力资源管理。二者在同一基础设施中协同，让通信与资源供给更贴近 AI 工作负载。</p>
+                    </div>
+                    <div class="product-position-grid">
+                        <article class="position-product position-supernic">
+                            <div class="position-product-top">
+                                <span class="product-tag">SUPERNIC</span>
+                                <span class="product-state">测试阶段</span>
+                            </div>
+                            <h3>
+                                AI 超级网卡
+                                <br />
+                                <em>SuperNIC400</em>
+                            </h3>
+                            <p>面向大模型训练与推理集群的高速互联产品，将通信相关的数据面处理下沉到网卡侧。</p>
+                            <div class="tech-stack">
+                                <h4>技术栈</h4>
+                                <ul>
+                                    <li>
+                                        <strong>2 × 200G 聚合 400G</strong>
+                                        <span>高带宽以太网接口</span>
+                                    </li>
+                                    <li>
+                                        <strong>RoCEv2 / RDMA</strong>
+                                        <span>协议与数据面硬件卸载</span>
+                                    </li>
+                                    <li>
+                                        <strong>多路径、乱序、拥塞控制</strong>
+                                        <span>面向复杂训练与推理流量</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="position-product-bottom">
+                                <span>核心场景：分布式训练 · 推理集群通信</span>
+                                <a href="mailto:sales@yuccacloud.com?subject=SuperNIC 产品咨询" aria-label="咨询 SuperNIC 产品"><i class="bi bi-arrow-up-right"></i></a>
+                            </div>
+                        </article>
+                        <article class="position-product position-cmu">
+                            <div class="position-product-top">
+                                <span class="product-tag">CMU DPU</span>
+                                <span class="product-state product-state-live">已商业落地</span>
+                            </div>
+                            <h3>
+                                AI 算力管理芯片
+                                <br />
+                                <em>CMU25 / CMU400</em>
+                            </h3>
+                            <p>面向 AI 云与弹性裸金属，将网络、存储与管理能力从主机侧卸载，为 GPU 资源接入云平台提供基础能力。</p>
+                            <div class="tech-stack">
+                                <h4>技术栈</h4>
+                                <ul>
+                                    <li>
+                                        <strong>专用计算与控制架构</strong>
+                                        <span>软硬协同的处理与控制平面</span>
+                                    </li>
+                                    <li>
+                                        <strong>virtio / OVS 卸载</strong>
+                                        <span>网络与存储 I/O 基础能力</span>
+                                    </li>
+                                    <li>
+                                        <strong>virtio-blk / virtio-fs</strong>
+                                        <span>系统镜像与 KV Cache 数据通路</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="position-product-bottom">
+                                <span>核心场景：AI 云 · 弹性裸金属 · 推理数据基础设施</span>
+                                <a href="portfolio-overview.html" aria-label="查看 CMU 产品详情"><i class="bi bi-arrow-up-right"></i></a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="product-note">产品阶段与规格以实际验证、测试及正式交付版本为准。</div>
+                    <div class="product-cta">
+                        <div>
+                            <h2>与亚格之芯一起，构建下一代 AI 算力基础设施。</h2>
+                            <p>获取产品资料，或交流 AI 云、训练与推理集群的基础设施方案。</p>
+                        </div>
+                        <a class="btn btn-contact" href="mailto:sales@yuccacloud.com?subject=AI 算力基础设施合作咨询">
+                            联系我们
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
                     </div>
                 </div>
             </section>
